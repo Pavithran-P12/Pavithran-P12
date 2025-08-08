@@ -42,3 +42,9 @@ Cloud:        Azure | AWS (basic)
 [![YouTube](https://img.shields.io/badge/YouTube-Subscribe-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/@NosGames_p12)
 [![Gmail](https://img.shields.io/badge/Gmail-Email-red?style=for-the-badge&logo=gmail)](mailto:pavi.12.pavi@gmail.com)
 
+## 🧭 My Growth Tracker
+
+🗂 I'm tracking all my completed tasks and milestones in [My-Achievements](https://github.com/Pavithran-P12/My-Achievements)  
+→ Each task is documented, dated, and explained in detail!
+
+
