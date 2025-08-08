@@ -36,6 +36,9 @@ Cloud:        Azure | AWS (basic)
 
 
 📬 Connect With Me
-LinkedIn - https://www.linkedin.com/in/pavithranm/
+## 📫 Connect With Me
 
-📧 pavi.12.pavi@gmail.com 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/pavithranm/)
+[![YouTube](https://img.shields.io/badge/YouTube-Subscribe-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/@NosGames_p12)
+[![Gmail](https://img.shields.io/badge/Gmail-Email-red?style=for-the-badge&logo=gmail)](mailto:pavi.12.pavi@gmail.com)
+
