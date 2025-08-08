@@ -34,3 +34,5 @@ Cloud:        Azure | AWS (basic)
   <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/Pavithran-P12/Pavithran-P12/output/pacman-contribution-graph.svg">
 </picture>
 
+.github/workflows/maze.yml
+
