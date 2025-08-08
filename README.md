@@ -26,4 +26,7 @@ Databases:    SQL Server | MySQL | PostgreSQL | Azure SQL
 Tools:        Git | Azure DevOps | SSIS | Power BI | DBT (learning)  
 Cloud:        Azure | AWS (basic)  
 ```
+📬 Connect With Me
+LinkedIn - https://www.linkedin.com/in/pavithranm/
 
+📧 pavi.12.pavi@gmail.com 
