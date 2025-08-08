@@ -26,13 +26,4 @@ Databases:    SQL Server | MySQL | PostgreSQL | Azure SQL
 Tools:        Git | Azure DevOps | SSIS | Power BI | DBT (learning)  
 Cloud:        Azure | AWS (basic)  
 ```
-## 👾 Cute Maze
-
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Pavithran-P12/VIDAKHOSHPEY22/output/pacman-contribution-graph.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Pavithran-P12/VIDAKHOSHPEY22/output/pacman-contribution-graph-dark.svg">
-  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/Pavithran-P12/Pavithran-P12/output/pacman-contribution-graph.svg">
-</picture>
-
-.github/workflows/maze.yml
 
