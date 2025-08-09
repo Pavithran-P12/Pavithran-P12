@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Pavithran M
 
-**💼 Technology Analyst @ Infosys**  
+**💼 Technology Analyst at Infosys LTD**  
 **🧠 Application & Database Developer | .NET & SQL Expert**  
 **🎯 On a mission to master modern data engineering by Jan 2026**
 
