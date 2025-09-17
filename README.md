@@ -45,6 +45,7 @@ Cloud:        Azure | AWS (basic)
 ## 🧭 My Growth Tracker
 
 🗂 I'm tracking all my completed tasks and milestones in [Milestones](https://github.com/Pavithran-P12/Milestones)
+Financial Planner(https://pavithran-p12.github.io/Financial-Planner)
 → Each task is documented, dated, and explained in detail!
 
 
