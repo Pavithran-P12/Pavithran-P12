@@ -1,6 +1,6 @@
 # 👋 Hey There! 🤖✨
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3500&pause=1000&color=10B981&background=FF661300&center=true&multiline=true&width=450&height=70&lines=I'm+Pavithran;Software+Analyst+at+Agilysys+%7C+.NET+%26+SQL+Developer+%7C+Constantly+Improving)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3500&pause=1000&color=10B981&background=FF661300&center=true&multiline=true&width=1200&height=70&lines=I'm+Pavithran;Software+Analyst+at+Agilysys+%7C+.NET+%26+SQL+Developer+%7C+Constantly+Improving)](https://git.io/typing-svg)
 
 **🧠 Experienced in .NET & SQL | Aspiring AI/Data Engineering Wizard**  
 **🎯 Goal: Conquer Modern Data Engineering by Jan 2026 with AI Innovation 🚀**
