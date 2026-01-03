@@ -1,33 +1,36 @@
 # 👋 Hey There! 🤖✨
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3500&pause=1000&color=10B981&background=FF661300&center=true&multiline=true&width=1200&height=70&lines=I'm+Pavithran;Software+Analyst+at+Agilysys+%7C+.NET+%26+SQL+Developer+%7C+Constantly+Improving)](https://git.io/typing-svg)
+## 🚀 About Me
 
-**🧠 Experienced in .NET & SQL | Aspiring AI/Data Engineering Wizard**  
-**🎯 Goal: Conquer Modern Data Engineering by Jan 2026 with AI Innovation 🚀**
+I’m a **Software Analyst** focused on becoming a **production-ready Full-Stack .NET Developer**.  
+My core strength lies in **SQL and backend development**, and I’m currently building **clean, scalable APIs using .NET Core**, paired with **Angular frontends** that consume real-world data.
+
+I enjoy working close to the data layer, designing efficient queries, and applying **good engineering practices** to write maintainable, readable, and performant code.
+
+### 🔧 Currently Focused On
+- 🔗 **API Development with .NET Core**
+  - RESTful APIs, controllers, services, DTOs, validation, error handling
+- 🗄️ **SQL & Data Handling**
+  - Schema design, joins, indexing, query optimization
+- 🖥️ **Angular Frontend Development**
+  - Components, services, routing, forms, API integration
+- 🔄 **Git & Engineering Practices**
+  - Git workflows, clean code, refactoring, debugging
+- ⚙️ **Application Architecture Basics**
+  - Layered architecture, separation of concerns, scalability
 
 ---
 
-### 🌌 About Me – The AI Cosmos Explorer
-
-I’m a tech-obsessed innovator with deep expertise in **SQL** and **.NET application development**, thriving as a Technology Analyst at Infosys. I craft scalable backend solutions and unravel real-world challenges with structured data, all while diving into the AI universe! My mission? To merge AI intelligence with data engineering mastery.
-
-Currently exploring the AI frontier:  
-- 🔄 **ETL & Data Engineering Pipelines** (Building AI-optimized data flows!)  
-- ☁️ **Cloud Platforms (Azure, AWS)** (Deploying AI in the cloud cosmos!)  
-- ⚙️ **Modern Data Stack (dbt, Snowflake, Python)** (AI-driven data alchemy!)  
-- 🧠 **AI/ML Frameworks** (Training neural networks for the future!)  
-
----
-
-### 🛠️ My Tech Arsenal – Fueled by AI Innovation
+## 🛠️ Tech Stack
 
 ```text
-Languages:    SQL | C# | Python | T-SQL | JavaScript  
-Frameworks:   .NET Core | ASP.NET | Entity Framework  
-Databases:    SQL Server | MySQL | PostgreSQL | Azure SQL  
-Tools:        Git | Azure DevOps | SSIS | Power BI | DBT (AI-enhanced learning)  
-Cloud:        Azure | AWS (AI-ready cloud ecosystems)  
-AI Power:     TensorFlow | PyTorch | Scikit-learn (Neural network playground!) 🤖
+Languages:     C# | SQL | T-SQL | TypeScript | JavaScript
+Backend:       .NET Core | ASP.NET Web API | Entity Framework Core
+Frontend:      Angular | HTML | CSS
+Databases:     SQL Server | Azure SQL | MySQL
+Tools:         Git | GitHub | Azure DevOps | Visual Studio | VS Code
+Practices:     Clean Code | REST API Design | Debugging | Refactoring
 ```
 ## 👾 Pac-Man GitHub Contribution Graph
 
