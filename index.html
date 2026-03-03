@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<html lang="en">
 <head>
-  <!-- Existing stuff like <title> and CSS links -->
-
-  <!-- ✅ SEO Meta Tags -->
+  <!-- SEO Meta Tags -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pavithran M | .NET & SQL Developer | Software Analyst at Agilysys</title>
   <meta name="description" content="Portfolio of Pavithran M, Software Analyst at Agilysys, expert in .NET & SQL development, aspiring Data Engineer. View my projects, skills, and achievements." />
   <meta name="keywords" content="Pavithran M, .NET Developer, SQL Developer,  Software Analyst, Agilysys, Data Engineer, C#, T-SQL, Azure, Portfolio" />
   <meta name="author" content="Pavithran M" />
+  <link rel="canonical" href="https://pavithran.tech/" />
+  <meta name="theme-color" content="#0d1117" />
 
-  <!-- ✅ Social Media Preview -->
+  <!-- Favicon (inline SVG — no extra file needed) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>" />
+
+  <!-- Preconnect to external origins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://img.shields.io" />
+  <link rel="preconnect" href="https://raw.githubusercontent.com" />
+  <link rel="preconnect" href="https://github-readme-stats.zohan.tech" />
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" />
+
+  <!-- Social Media Preview -->
   <meta property="og:title" content="Pavithran M" />
   <meta property="og:description" content="Explore my portfolio, skills, GitHub projects, and achievements as a Software Analyst at Agilysys." />
   <meta property="og:image" content="https://pavithran.tech/profile-image.jpg" />
@@ -23,7 +35,7 @@
   <meta name="twitter:description" content="Software Analyst @ Agilysys | .NET, SQL, Data Engineering" />
   <meta name="twitter:image" content="https://pavithran.tech/profile-image.jpg" />
 
-  <!-- ✅ Structured Data -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -44,80 +56,583 @@
   }
   </script>
 
-  <title>Pavithran M | Portfolio</title>
   <style>
+    /* ===== Design Tokens ===== */
     :root {
-      --bg-light: #f9f9f9;
-      --bg-dark: #0d1117;
-      --text-light: #333;
-      --text-dark: #e6edf3;
+      --bg: #f9f9f9;
+      --bg-card: rgba(255,255,255,0.7);
+      --bg-nav: rgba(249,249,249,0.8);
+      --text: #1a1a2e;
+      --text-muted: #555;
       --accent: #58a6ff;
+      --accent-glow: rgba(88,166,255,0.25);
+      --border: rgba(0,0,0,0.08);
+      --shadow: 0 4px 24px rgba(0,0,0,0.06);
+      --shadow-hover: 0 8px 32px rgba(0,0,0,0.12);
+      --radius: 16px;
+      --radius-sm: 8px;
+      --nav-height: 60px;
+      --font-sans: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
     }
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background-color: var(--bg-light);
-      color: var(--text-light);
-      transition: background 0.3s, color 0.3s;
+
+    /* Dark theme class (toggled by JS) */
+    [data-theme="dark"] {
+      --bg: #0d1117;
+      --bg-card: rgba(22,27,34,0.7);
+      --bg-nav: rgba(13,17,23,0.85);
+      --text: #e6edf3;
+      --text-muted: #8b949e;
+      --border: rgba(255,255,255,0.08);
+      --shadow: 0 4px 24px rgba(0,0,0,0.3);
+      --shadow-hover: 0 8px 32px rgba(0,0,0,0.5);
     }
+
+    /* Also respect system preference when no toggle used */
     @media (prefers-color-scheme: dark) {
-      body {
-        background-color: var(--bg-dark);
-        color: var(--text-dark);
+      :root:not([data-theme="light"]) {
+        --bg: #0d1117;
+        --bg-card: rgba(22,27,34,0.7);
+        --bg-nav: rgba(13,17,23,0.85);
+        --text: #e6edf3;
+        --text-muted: #8b949e;
+        --border: rgba(255,255,255,0.08);
+        --shadow: 0 4px 24px rgba(0,0,0,0.3);
+        --shadow-hover: 0 8px 32px rgba(0,0,0,0.5);
       }
     }
-    header {
+
+    /* ===== Reset & Base ===== */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-height) + 1rem); }
+
+    body {
+      font-family: var(--font-sans);
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.35s ease, color 0.35s ease;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img { max-width: 100%; height: auto; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ===== Accessibility ===== */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      z-index: 200;
+      padding: 0.5rem 1rem;
+      background: var(--accent);
+      color: #fff;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: top 0.2s;
+    }
+    .skip-link:focus {
+      top: 0.5rem;
+    }
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    /* Remove default focus for mouse users */
+    :focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    /* ===== Reduced Motion ===== */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .fade-up { opacity: 1; transform: none; }
+    }
+
+    /* ===== Sticky Navbar ===== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      background: var(--bg-nav);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.35s ease;
+    }
+    .navbar .logo {
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .navbar .logo span { color: var(--accent); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 0.3rem 0;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      text-decoration: none;
+    }
+    .theme-toggle {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, border-color 0.2s;
+      color: var(--text);
+    }
+    .theme-toggle:hover {
+      background: var(--accent-glow);
+      border-color: var(--accent);
+    }
+
+    /* Mobile nav */
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text);
+    }
+    @media (max-width: 640px) {
+      .nav-hamburger { display: block; }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: var(--nav-height);
+        left: 0;
+        right: 0;
+        background: var(--bg-nav);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 2rem;
+        gap: 0.75rem;
+      }
+      .nav-links.open { display: flex; }
+    }
+
+    /* ===== Hero Section ===== */
+    .hero {
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 5rem 1.5rem 3rem;
+      background: linear-gradient(135deg, rgba(88,166,255,0.08) 0%, transparent 60%);
     }
-    header h1 {
-      margin-bottom: 0.5rem;
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      margin: 0 0 0.25rem;
+      letter-spacing: -0.02em;
     }
-    header p {
-      margin: 0.3rem 0;
+    .hero h1 span { color: var(--accent); }
+    .hero .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin: 0 0 1.5rem;
     }
-    section {
-      max-width: 800px;
-      margin: auto;
-      padding: 1rem;
+    .hero .typing-img {
+      margin-bottom: 1.5rem;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.5rem;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 4px 14px var(--accent-glow);
+    }
+    .btn-primary:hover { box-shadow: 0 6px 20px var(--accent-glow); }
+    .btn-outline {
+      background: transparent;
+      color: var(--accent);
+      border: 1.5px solid var(--accent);
+    }
+    .btn-outline:hover { background: var(--accent-glow); }
+
+    /* ===== Section Cards ===== */
+    .card-section {
+      max-width: 850px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: var(--bg-card);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-section:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
     }
     h2 {
       color: var(--accent);
-      margin-top: 2rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    .center { text-align: center; }
+
+    /* Tech stack pills */
+    .tech-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+    }
+    .tech-category {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+    .tech-category-label {
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
       text-align: center;
     }
-    pre {
-      background: rgba(0,0,0,0.05);
-      padding: 1rem;
-      overflow-x: auto;
-      border-radius: 6px;
+    .tech-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
     }
-    @media (prefers-color-scheme: dark) {
-      pre {
-        background: rgba(255,255,255,0.05);
-      }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      font-family: var(--font-mono);
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-    .center {
-      text-align: center;
+    .pill:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px var(--accent-glow);
     }
+    .pill-icon {
+      font-size: 1rem;
+    }
+
+    /* Badges */
     .badges a {
       display: inline-block;
-      margin: 0.5rem;
+      margin: 0.4rem;
+      transition: transform 0.2s;
     }
-    img {
-      max-width: 100%;
-      height: auto;
+    .badges a:hover { transform: scale(1.08); }
+
+    /* ===== Project Cards Grid ===== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .project-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .project-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+    .project-card h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.05rem;
+    }
+    .project-card h3 a { text-decoration: none; }
+    .project-card h3 a:hover { text-decoration: underline; }
+    .project-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin: 0 0 0.75rem;
+      line-height: 1.5;
+    }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .project-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      font-family: var(--font-mono);
+      padding: 0.2rem 0.6rem;
+      border-radius: 50px;
+      background: var(--accent-glow);
+      color: var(--accent);
+    }
+
+    /* ===== Timeline ===== */
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+      margin-top: 1rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 4px;
+      bottom: 4px;
+      width: 2px;
+      background: var(--accent);
+      opacity: 0.3;
+      border-radius: 2px;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2rem;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--bg-card);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+    .timeline-date {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .timeline-title {
+      font-weight: 700;
+      font-size: 1rem;
+      margin: 0.15rem 0;
+    }
+    .timeline-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    /* ===== GitHub Stats ===== */
+    .stats-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+    }
+    .stats-row img {
+      border-radius: var(--radius-sm);
+      max-height: 195px;
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      margin-top: 3rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 1.25rem;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--accent); }
+    .footer p { margin: 0.25rem 0; }
+
+    /* ===== Utility ===== */
+    @media (max-width: 900px) {
+      .card-section { margin: 1.5rem 1rem; }
+    }
+
+    /* ===== Scroll Animations ===== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== Back to Top ===== */
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 90;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: var(--accent);
+      font-size: 1.3rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(10px);
+      transition: opacity 0.3s, transform 0.3s, background 0.2s;
+    }
+    .back-to-top.show {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+    .back-to-top:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* ===== Print Stylesheet ===== */
+    @media print {
+      .navbar, .back-to-top, .theme-toggle, .nav-hamburger,
+      .hero-cta, .badges, .stats-row, .footer-links { display: none !important; }
+      body { background: #fff; color: #000; font-size: 11pt; line-height: 1.5; }
+      .card-section {
+        background: none;
+        border: 1px solid #ddd;
+        box-shadow: none;
+        backdrop-filter: none;
+        break-inside: avoid;
+        margin: 1rem 0;
+        padding: 1rem;
+      }
+      .card-section:hover { transform: none; box-shadow: none; }
+      .hero {
+        background: none;
+        padding: 1.5rem 0;
+      }
+      h1, h2 { color: #000; }
+      a { color: #000; text-decoration: underline; }
+      a::after { content: ' (' attr(href) ')'; font-size: 0.8em; color: #555; }
+      .pill { border-color: #ccc; background: #f5f5f5; }
+      .project-tag { background: #eee; color: #333; }
+      .fade-up { opacity: 1; transform: none; }
+      .footer { border-top: 1px solid #ddd; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3500&pause=1000&color=07D2F7&background=FF661300&center=true&multiline=true&width=1300&height=70&lines=I'm+Pavithran;Software+Analyst+at+Agilysys+%7C+.NET+%26+SQL+Developer+%7C+Focused+on+Continuous+Improvement" alt="Typing SVG" />
+  <!-- Skip to content link for keyboard users -->
+  <a href="#about" class="skip-link">Skip to main content</a>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="#" class="logo"><span>&lt;</span>Pavithran<span>/&gt;</span></a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#tech">Tech Stack</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#stats">Stats</a></li>
+      <li><a href="#contributions">Contributions</a></li>
+      <li><a href="#connect">Connect</a></li>
+      <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button></li>
+    </ul>
+  </nav>
+
+  <!-- ===== Hero Section ===== -->
+  <header class="hero" role="banner">
+    <h1>Hi, I'm <span>Pavithran M</span></h1>
+    <p class="subtitle">Software Analyst @ Agilysys &bull; .NET &amp; SQL Developer &bull; Aspiring Data Engineer</p>
+    <div class="hero-cta">
+      <a href="https://github.com/Pavithran-P12" target="_blank" rel="noopener noreferrer" class="btn btn-primary">⭐ View GitHub</a>
+      <a href="https://www.linkedin.com/in/pavithranm/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">💼 LinkedIn</a>
+    </div>
   </header>
 
-  <section>
+  <!-- ===== About ===== -->
+  <main>
+  <section class="card-section fade-up" id="about">
     <h2>💡 About Me</h2>
    <p>
     I’m a <strong>Software Analyst</strong> focused on becoming a 
@@ -134,45 +649,251 @@
     </p>
   </section>
 
-  <section>
+  <!-- ===== Tech Stack ===== -->
+  <section class="card-section fade-up" id="tech">
     <h2>🛠️ Tech Stack</h2>
-   <pre>
-    Languages:     C# | SQL | T-SQL | TypeScript | JavaScript
-    Backend:       .NET Core | ASP.NET Web API | Entity Framework Core
-    Frontend:      Angular | HTML | CSS
-    Databases:     SQL Server | Azure SQL | MySQL
-    Tools:         Git | GitHub | Azure DevOps | Visual Studio | VS Code
-    Practices:     Clean Code | REST API Design | Debugging | Refactoring
-  </pre>
+    <div class="tech-grid">
+      <div class="tech-category">
+        <div class="tech-category-label">Languages</div>
+        <div class="tech-pills">
+          <span class="pill"><span class="pill-icon">🔷</span> C#</span>
+          <span class="pill"><span class="pill-icon">🗃️</span> SQL</span>
+          <span class="pill"><span class="pill-icon">🗃️</span> T-SQL</span>
+          <span class="pill"><span class="pill-icon">🔵</span> TypeScript</span>
+          <span class="pill"><span class="pill-icon">🟡</span> JavaScript</span>
+        </div>
+      </div>
+      <div class="tech-category">
+        <div class="tech-category-label">Backend</div>
+        <div class="tech-pills">
+          <span class="pill"><span class="pill-icon">⚙️</span> .NET Core</span>
+          <span class="pill"><span class="pill-icon">🌐</span> ASP.NET Web API</span>
+          <span class="pill"><span class="pill-icon">💾</span> Entity Framework Core</span>
+        </div>
+      </div>
+      <div class="tech-category">
+        <div class="tech-category-label">Frontend</div>
+        <div class="tech-pills">
+          <span class="pill"><span class="pill-icon">🅰️</span> Angular</span>
+          <span class="pill"><span class="pill-icon">🏠</span> HTML</span>
+          <span class="pill"><span class="pill-icon">🎨</span> CSS</span>
+        </div>
+      </div>
+      <div class="tech-category">
+        <div class="tech-category-label">Databases</div>
+        <div class="tech-pills">
+          <span class="pill"><span class="pill-icon">🛲</span> SQL Server</span>
+          <span class="pill"><span class="pill-icon">☁️</span> Azure SQL</span>
+          <span class="pill"><span class="pill-icon">🐬</span> MySQL</span>
+        </div>
+      </div>
+      <div class="tech-category">
+        <div class="tech-category-label">Tools</div>
+        <div class="tech-pills">
+          <span class="pill"><span class="pill-icon">🔀</span> Git</span>
+          <span class="pill"><span class="pill-icon">🐙</span> GitHub</span>
+          <span class="pill"><span class="pill-icon">🚀</span> Azure DevOps</span>
+          <span class="pill"><span class="pill-icon">💻</span> Visual Studio</span>
+          <span class="pill"><span class="pill-icon">🖥️</span> VS Code</span>
+        </div>
+      </div>
+      <div class="tech-category">
+        <div class="tech-category-label">Practices</div>
+        <div class="tech-pills">
+          <span class="pill"><span class="pill-icon">✨</span> Clean Code</span>
+          <span class="pill"><span class="pill-icon">🔗</span> REST API Design</span>
+          <span class="pill"><span class="pill-icon">🔍</span> Debugging</span>
+          <span class="pill"><span class="pill-icon">♻️</span> Refactoring</span>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="center">
+  <!-- ===== Featured Projects ===== -->
+  <section class="card-section fade-up" id="projects">
+    <h2>📂 Featured Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3><a href="https://pavithran-p12.github.io/InOfficeIQ/" target="_blank" rel="noopener noreferrer">🏢 InOfficeIQ</a></h3>
+        <p>Full-stack office attendance tracking system with .NET Core API backend and Angular frontend. Features real-time dashboards and reporting.</p>
+        <div class="project-tags">
+          <span class="project-tag">.NET Core</span>
+          <span class="project-tag">Angular</span>
+          <span class="project-tag">SQL Server</span>
+          <span class="project-tag">REST API</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3><a href="https://github.com/Pavithran-P12/Milestones" target="_blank" rel="noopener noreferrer">🧭 Milestones</a></h3>
+        <p>Personal growth tracker documenting every completed task, learning milestone, and project achievement with detailed write-ups.</p>
+        <div class="project-tags">
+          <span class="project-tag">Documentation</span>
+          <span class="project-tag">Growth Tracking</span>
+          <span class="project-tag">Markdown</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3><a href="https://github.com/Pavithran-P12/ReadmePacman" target="_blank" rel="noopener noreferrer">👾 ReadmePacman</a></h3>
+        <p>Custom GitHub Actions workflow that generates an animated Pac-Man contribution graph for your GitHub profile README.</p>
+        <div class="project-tags">
+          <span class="project-tag">GitHub Actions</span>
+          <span class="project-tag">SVG</span>
+          <span class="project-tag">Automation</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3><a href="https://pavithran.tech" target="_blank" rel="noopener noreferrer">🌐 Portfolio Website</a></h3>
+        <p>This very site — a modern, single-file portfolio built with vanilla HTML/CSS/JS, hosted on GitHub Pages with dark mode and scroll animations.</p>
+        <div class="project-tags">
+          <span class="project-tag">HTML</span>
+          <span class="project-tag">CSS</span>
+          <span class="project-tag">JavaScript</span>
+          <span class="project-tag">GitHub Pages</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Experience Timeline ===== -->
+  <section class="card-section fade-up" id="experience">
+    <h2>💼 Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2023 – Present</div>
+        <div class="timeline-title">Software Analyst @ Agilysys</div>
+        <p class="timeline-desc">Building and maintaining enterprise hospitality solutions using .NET, T-SQL, and Azure. Focused on backend API development, database optimization, and production support for high-availability systems.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2023</div>
+        <div class="timeline-title">Started Professional Career</div>
+        <p class="timeline-desc">Joined Agilysys as a fresh graduate, quickly ramping up on enterprise codebases, debugging production issues, and contributing to feature development sprint-over-sprint.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2019 – 2023</div>
+        <div class="timeline-title">Bachelor's in Computer Science</div>
+        <p class="timeline-desc">Graduated with a strong foundation in programming, databases, and software engineering. Built multiple academic and side projects that sharpened real-world development skills.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GitHub Stats ===== -->
+  <section class="card-section center fade-up" id="stats">
+    <h2>📊 GitHub Stats</h2>
+    <div class="stats-row">
+      <img src="https://github-readme-stats.zohan.tech/api?username=Pavithran-P12&show_icons=true&theme=transparent&hide_border=true&bg_color=00000000&title_color=58a6ff&text_color=8b949e&icon_color=58a6ff" alt="GitHub Stats" loading="lazy" />
+      <img src="https://github-readme-stats.zohan.tech/api/top-langs/?username=Pavithran-P12&layout=compact&theme=transparent&hide_border=true&bg_color=00000000&title_color=58a6ff&text_color=8b949e" alt="Top Languages" loading="lazy" />
+    </div>
+    <div class="stats-row" style="margin-top: 1rem;">
+      <img src="https://streak-stats.demolab.com/?user=Pavithran-P12&theme=transparent&hide_border=true&background=00000000&ring=58a6ff&fire=58a6ff&currStreakLabel=58a6ff&sideLabels=8b949e&dates=8b949e" alt="GitHub Streak" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- ===== Contributions ===== -->
+  <section class="card-section center fade-up" id="contributions">
     <h2>👾 Pac-Man GitHub Contribution Graph</h2>
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Pavithran-P12/ReadmePacman/output/pacman-contribution-graph-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Pavithran-P12/ReadmePacman/output/pacman-contribution-graph.svg">
-      <img alt="Pac-Man contribution graph" src="https://raw.githubusercontent.com/Pavithran-P12/ReadmePacman/output/pacman-contribution-graph.svg">
+      <img alt="Pac-Man contribution graph" src="https://raw.githubusercontent.com/Pavithran-P12/ReadmePacman/output/pacman-contribution-graph.svg" loading="lazy">
     </picture>
   </section>
 
-  <section class="center">
+  <!-- ===== Connect ===== -->
+  <section class="card-section center fade-up" id="connect">
     <h2>📫 Connect With Me</h2>
     <div class="badges">
-      <a href="https://www.linkedin.com/in/pavithranm/" target="_blank">
-        <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin" alt="LinkedIn" />
+      <a href="https://www.linkedin.com/in/pavithranm/" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin" alt="LinkedIn" loading="lazy" />
       </a>
-      <a href="https://www.youtube.com/@NosGames_p12" target="_blank">
-        <img src="https://img.shields.io/badge/YouTube-Subscribe-red?style=for-the-badge&logo=youtube" alt="YouTube" />
+      <a href="https://www.youtube.com/@NosGames_p12" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.shields.io/badge/YouTube-Subscribe-red?style=for-the-badge&logo=youtube" alt="YouTube" loading="lazy" />
       </a>
       <a href="mailto:pavi.12.pavi@gmail.com">
-        <img src="https://img.shields.io/badge/Gmail-Email-red?style=for-the-badge&logo=gmail" alt="Gmail" />
+        <img src="https://img.shields.io/badge/Gmail-Email-red?style=for-the-badge&logo=gmail" alt="Gmail" loading="lazy" />
       </a>
     </div>
   </section>
 
-  <section class="center">
+  <!-- ===== Growth Tracker ===== -->
+  <section class="card-section center fade-up" id="growth">
     <h2>🧭 My Growth Tracker</h2>
-    <p>🗂 I'm tracking all my completed tasks and milestones in <a href="https://github.com/Pavithran-P12/Milestones" target="_blank">Milestones</a> → Each task is documented, dated, and explained in detail!</p>
+    <p>🗂 I'm tracking all my completed tasks and milestones in <a href="https://github.com/Pavithran-P12/Milestones" target="_blank" rel="noopener noreferrer">Milestones</a> → Each task is documented, dated, and explained in detail!</p>
   </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-links">
+      <a href="https://github.com/Pavithran-P12" target="_blank" rel="noopener noreferrer" aria-label="GitHub">🐙</a>
+      <a href="https://www.linkedin.com/in/pavithranm/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">💼</a>
+      <a href="https://www.youtube.com/@NosGames_p12" target="_blank" rel="noopener noreferrer" aria-label="YouTube">🎬</a>
+      <a href="mailto:pavi.12.pavi@gmail.com" aria-label="Email">✉️</a>
+    </div>
+    <p>&copy; 2026 Pavithran M. All rights reserved.</p>
+    <p>Built with ❤️ and hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+  </footer>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // Dark mode toggle with localStorage persistence
+    const toggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    const saved = localStorage.getItem('theme');
+    if (saved) {
+      root.setAttribute('data-theme', saved);
+      toggle.textContent = saved === 'dark' ? '☀️' : '🌙';
+    }
+    toggle.addEventListener('click', () => {
+      const isDark = root.getAttribute('data-theme') === 'dark' ||
+        (!root.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      const next = isDark ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      toggle.textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+
+    // Mobile hamburger menu
+    document.getElementById('navHamburger').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('.card-section');
+    const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+    const navObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navAnchors.forEach(a => a.classList.remove('active'));
+          const active = document.querySelector('.nav-links a[href="#' + e.target.id + '"]');
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach(s => navObserver.observe(s));
+
+    // Scroll fade-in animations
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const fadeObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          fadeObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    fadeEls.forEach(el => fadeObserver.observe(el));
+
+    // Back to top button
+    const topBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      topBtn.classList.toggle('show', window.scrollY > 300);
+    });
+    topBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
