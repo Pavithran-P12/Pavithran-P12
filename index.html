@@ -12,18 +12,22 @@
   <meta name="theme-color" content="#0d1117" />
 
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>" />
-  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%233b82f6'/><text x='50' y='58' text-anchor='middle' dominant-baseline='central' font-family='monospace' font-weight='bold' font-size='52' fill='white'>P</text></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%233b82f6'/><text x='50' y='58' text-anchor='middle' dominant-baseline='central' font-family='monospace' font-weight='bold' font-size='52' fill='white'>P</text></svg>" />
 
   <!-- Preconnect to external origins -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://img.shields.io" />
-  <link rel="preconnect" href="https://raw.githubusercontent.com" />
-  <link rel="preconnect" href="https://github-readme-stats.zohan.tech" />
+  <link rel="dns-prefetch" href="https://img.shields.io" />
+  <link rel="dns-prefetch" href="https://raw.githubusercontent.com" />
+  <link rel="dns-prefetch" href="https://github-readme-stats.zohan.tech" />
+  <link rel="dns-prefetch" href="https://streak-stats.demolab.com" />
 
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 
   <!-- Social Media Preview -->
   <meta property="og:title" content="Pavithran M – .NET & SQL Developer in Chennai" />
@@ -89,558 +93,26 @@
   }
   </script>
 
-  <style>
-    /* ===== Design Tokens ===== */
-    :root {
-      --bg: #f9f9f9;
-      --bg-card: rgba(255,255,255,0.7);
-      --bg-nav: rgba(249,249,249,0.8);
-      --text: #1a1a2e;
-      --text-muted: #555;
-      --accent: #58a6ff;
-      --accent-glow: rgba(88,166,255,0.25);
-      --border: rgba(0,0,0,0.08);
-      --shadow: 0 4px 24px rgba(0,0,0,0.06);
-      --shadow-hover: 0 8px 32px rgba(0,0,0,0.12);
-      --radius: 16px;
-      --radius-sm: 8px;
-      --nav-height: 60px;
-      --font-sans: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
-      --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
-    }
 
-    /* Dark theme class (toggled by JS) */
-    [data-theme="dark"] {
-      --bg: #0d1117;
-      --bg-card: rgba(22,27,34,0.7);
-      --bg-nav: rgba(13,17,23,0.85);
-      --text: #e6edf3;
-      --text-muted: #8b949e;
-      --border: rgba(255,255,255,0.08);
-      --shadow: 0 4px 24px rgba(0,0,0,0.3);
-      --shadow-hover: 0 8px 32px rgba(0,0,0,0.5);
-    }
-
-    /* Also respect system preference when no toggle used */
-    @media (prefers-color-scheme: dark) {
-      :root:not([data-theme="light"]) {
-        --bg: #0d1117;
-        --bg-card: rgba(22,27,34,0.7);
-        --bg-nav: rgba(13,17,23,0.85);
-        --text: #e6edf3;
-        --text-muted: #8b949e;
-        --border: rgba(255,255,255,0.08);
-        --shadow: 0 4px 24px rgba(0,0,0,0.3);
-        --shadow-hover: 0 8px 32px rgba(0,0,0,0.5);
-      }
-    }
-
-    /* ===== Reset & Base ===== */
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-height) + 1rem); }
-
-    body {
-      font-family: var(--font-sans);
-      margin: 0;
-      padding: 0;
-      line-height: 1.7;
-      background: var(--bg);
-      color: var(--text);
-      transition: background 0.35s ease, color 0.35s ease;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    img { max-width: 100%; height: auto; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    /* ===== Accessibility ===== */
-    .skip-link {
-      position: absolute;
-      top: -100%;
-      left: 1rem;
-      z-index: 200;
-      padding: 0.5rem 1rem;
-      background: var(--accent);
-      color: #fff;
-      border-radius: var(--radius-sm);
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-decoration: none;
-      transition: top 0.2s;
-    }
-    .skip-link:focus {
-      top: 0.5rem;
-    }
-    :focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 2px;
-    }
-    /* Remove default focus for mouse users */
-    :focus:not(:focus-visible) {
-      outline: none;
-    }
-
-    /* ===== Reduced Motion ===== */
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-      }
-      .fade-up { opacity: 1; transform: none; }
-    }
-
-    /* ===== Sticky Navbar ===== */
-    .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      height: var(--nav-height);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 2rem;
-      background: var(--bg-nav);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      transition: background 0.35s ease;
-    }
-    .navbar .logo {
-      font-weight: 700;
-      font-size: 1.15rem;
-      color: var(--text);
-      text-decoration: none;
-    }
-    .navbar .logo span { color: var(--accent); }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    .nav-links a {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-decoration: none;
-      padding: 0.3rem 0;
-      border-bottom: 2px solid transparent;
-      transition: color 0.2s, border-color 0.2s;
-    }
-    .nav-links a:hover, .nav-links a.active {
-      color: var(--accent);
-      border-bottom-color: var(--accent);
-      text-decoration: none;
-    }
-    .theme-toggle {
-      background: none;
-      border: 1px solid var(--border);
-      border-radius: 50%;
-      width: 36px;
-      height: 36px;
-      cursor: pointer;
-      font-size: 1.1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.2s, border-color 0.2s;
-      color: var(--text);
-    }
-    .theme-toggle:hover {
-      background: var(--accent-glow);
-      border-color: var(--accent);
-    }
-
-    /* Mobile nav */
-    .nav-hamburger {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: var(--text);
-    }
-    @media (max-width: 640px) {
-      .nav-hamburger { display: block; }
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: var(--nav-height);
-        left: 0;
-        right: 0;
-        background: var(--bg-nav);
-        backdrop-filter: blur(12px);
-        border-bottom: 1px solid var(--border);
-        padding: 1rem 2rem;
-        gap: 0.75rem;
-      }
-      .nav-links.open { display: flex; }
-    }
-
-    /* ===== Hero Section ===== */
-    .hero {
-      text-align: center;
-      padding: 5rem 1.5rem 3rem;
-      background: linear-gradient(135deg, rgba(88,166,255,0.08) 0%, transparent 60%);
-    }
-    .hero h1 {
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 800;
-      margin: 0 0 0.25rem;
-      letter-spacing: -0.02em;
-    }
-    .hero h1 span { color: var(--accent); }
-    .hero .subtitle {
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      margin: 0 0 1.5rem;
-    }
-    .hero .typing-img {
-      margin-bottom: 1.5rem;
-    }
-    .hero-cta {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.7rem 1.5rem;
-      border-radius: var(--radius-sm);
-      font-weight: 600;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .btn:hover {
-      transform: translateY(-2px);
-      text-decoration: none;
-    }
-    .btn-primary {
-      background: var(--accent);
-      color: #fff;
-      box-shadow: 0 4px 14px var(--accent-glow);
-    }
-    .btn-primary:hover { box-shadow: 0 6px 20px var(--accent-glow); }
-    .btn-outline {
-      background: transparent;
-      color: var(--accent);
-      border: 1.5px solid var(--accent);
-    }
-    .btn-outline:hover { background: var(--accent-glow); }
-
-    /* ===== Section Cards ===== */
-    .card-section {
-      max-width: 850px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background: var(--bg-card);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card-section:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-hover);
-    }
-    h2 {
-      color: var(--accent);
-      margin-top: 0;
-      margin-bottom: 1rem;
-      text-align: center;
-      font-size: 1.5rem;
-    }
-    .center { text-align: center; }
-
-    /* Tech stack pills */
-    .tech-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      justify-content: center;
-    }
-    .tech-category {
-      width: 100%;
-      margin-bottom: 0.5rem;
-    }
-    .tech-category-label {
-      font-weight: 700;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
-      text-align: center;
-    }
-    .tech-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      justify-content: center;
-    }
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      padding: 0.35rem 0.85rem;
-      border-radius: 50px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      font-family: var(--font-mono);
-      border: 1px solid var(--border);
-      background: var(--bg);
-      color: var(--text);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .pill:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px var(--accent-glow);
-    }
-    .pill-icon {
-      font-size: 1rem;
-    }
-
-    /* Badges */
-    .badges a {
-      display: inline-block;
-      margin: 0.4rem;
-      transition: transform 0.2s;
-    }
-    .badges a:hover { transform: scale(1.08); }
-
-    /* ===== Project Cards Grid ===== */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.25rem;
-    }
-    .project-card {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 1.25rem;
-      transition: transform 0.25s, box-shadow 0.25s;
-    }
-    .project-card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-hover);
-    }
-    .project-card h3 {
-      margin: 0 0 0.4rem;
-      font-size: 1.05rem;
-    }
-    .project-card h3 a { text-decoration: none; }
-    .project-card h3 a:hover { text-decoration: underline; }
-    .project-card p {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      margin: 0 0 0.75rem;
-      line-height: 1.5;
-    }
-    .project-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
-    .project-tag {
-      font-size: 0.72rem;
-      font-weight: 600;
-      font-family: var(--font-mono);
-      padding: 0.2rem 0.6rem;
-      border-radius: 50px;
-      background: var(--accent-glow);
-      color: var(--accent);
-    }
-
-    /* ===== Timeline ===== */
-    .timeline {
-      position: relative;
-      padding-left: 2rem;
-      margin-top: 1rem;
-    }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 7px;
-      top: 4px;
-      bottom: 4px;
-      width: 2px;
-      background: var(--accent);
-      opacity: 0.3;
-      border-radius: 2px;
-    }
-    .timeline-item {
-      position: relative;
-      margin-bottom: 1.5rem;
-    }
-    .timeline-item:last-child { margin-bottom: 0; }
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: -2rem;
-      top: 6px;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--accent);
-      border: 2px solid var(--bg-card);
-      box-shadow: 0 0 0 3px var(--accent-glow);
-    }
-    .timeline-date {
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    .timeline-title {
-      font-weight: 700;
-      font-size: 1rem;
-      margin: 0.15rem 0;
-    }
-    .timeline-desc {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      margin: 0;
-      line-height: 1.55;
-    }
-
-    /* ===== GitHub Stats ===== */
-    .stats-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      align-items: center;
-    }
-    .stats-row img {
-      border-radius: var(--radius-sm);
-      max-height: 195px;
-    }
-
-    /* ===== Footer ===== */
-    .footer {
-      text-align: center;
-      padding: 2.5rem 1rem;
-      margin-top: 3rem;
-      border-top: 1px solid var(--border);
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    .footer-links a {
-      color: var(--text-muted);
-      font-size: 1.25rem;
-      transition: color 0.2s;
-    }
-    .footer-links a:hover { color: var(--accent); }
-    .footer p { margin: 0.25rem 0; }
-
-    /* ===== Utility ===== */
-    @media (max-width: 900px) {
-      .card-section { margin: 1.5rem 1rem; }
-    }
-
-    /* ===== Scroll Animations ===== */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ===== Back to Top ===== */
-    .back-to-top {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      z-index: 90;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      border: 1px solid var(--border);
-      background: var(--bg-card);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      color: var(--accent);
-      font-size: 1.3rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: var(--shadow);
-      opacity: 0;
-      pointer-events: none;
-      transform: translateY(10px);
-      transition: opacity 0.3s, transform 0.3s, background 0.2s;
-    }
-    .back-to-top.show {
-      opacity: 1;
-      pointer-events: auto;
-      transform: translateY(0);
-    }
-    .back-to-top:hover {
-      background: var(--accent);
-      color: #fff;
-    }
-
-    /* ===== Print Stylesheet ===== */
-    @media print {
-      .navbar, .back-to-top, .theme-toggle, .nav-hamburger,
-      .hero-cta, .badges, .stats-row, .footer-links { display: none !important; }
-      body { background: #fff; color: #000; font-size: 11pt; line-height: 1.5; }
-      .card-section {
-        background: none;
-        border: 1px solid #ddd;
-        box-shadow: none;
-        backdrop-filter: none;
-        break-inside: avoid;
-        margin: 1rem 0;
-        padding: 1rem;
-      }
-      .card-section:hover { transform: none; box-shadow: none; }
-      .hero {
-        background: none;
-        padding: 1.5rem 0;
-      }
-      h1, h2 { color: #000; }
-      a { color: #000; text-decoration: underline; }
-      a::after { content: ' (' attr(href) ')'; font-size: 0.8em; color: #555; }
-      .pill { border-color: #ccc; background: #f5f5f5; }
-      .project-tag { background: #eee; color: #333; }
-      .fade-up { opacity: 1; transform: none; }
-      .footer { border-top: 1px solid #ddd; }
-    }
-  </style>
 </head>
 <body>
+  <!-- Shared SVG gradient for section icons -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" style="position:absolute">
+    <defs>
+      <linearGradient id="icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#3b82f6"/>
+        <stop offset="100%" stop-color="#8b5cf6"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
   <!-- Skip to content link for keyboard users -->
   <a href="#about" class="skip-link">Skip to main content</a>
 
   <!-- ===== Navbar ===== -->
   <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
     <a href="#" class="logo"><span>&lt;</span>Pavithran<span>/&gt;</span></a>
-    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">☰</button>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -648,7 +120,7 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#stats">Stats</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button></li>
+      <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg><svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button></li>
     </ul>
   </nav>
 
@@ -656,16 +128,16 @@
   <header class="hero" role="banner">
     <h1>.NET &amp; SQL Developer in Chennai – <span>Pavithran M</span></h1>
     <p class="subtitle">Software Analyst @ Agilysys &bull; ASP.NET Core Developer &bull; SQL Server Specialist &bull; Based in Chennai, India</p>
-    <div class="hero-cta">
-      <a href="#projects" class="btn btn-primary">📂 View Projects</a>
-      <a href="#contact" class="btn btn-outline">📬 Get In Touch</a>
-    </div>
+    <nav class="hero-cta" aria-label="Quick links">
+      <a href="#projects" class="btn btn-primary"><svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg> View Projects</a>
+      <a href="#contact" class="btn btn-outline"><svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Get In Touch</a>
+    </nav>
   </header>
 
   <!-- ===== About ===== -->
   <main>
   <section class="card-section fade-up" id="about">
-    <h2>💡 About Me</h2>
+    <h2><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg> About Me</h2>
     <p>
       I'm <strong>Pavithran M</strong>, a <strong>.NET &amp; SQL Developer based in Chennai, India</strong>,
       currently working as a <strong>Software Analyst at Agilysys</strong>. I specialize in building
@@ -697,60 +169,60 @@
 
   <!-- ===== Technical Expertise ===== -->
   <section class="card-section fade-up" id="skills">
-    <h2>🎯 Technical Expertise</h2>
-    <p style="text-align:center;color:var(--text-muted);margin-bottom:1rem;">Core competencies as a .NET &amp; SQL Developer in Chennai</p>
+    <h2><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> Technical Expertise</h2>
+    <p class="section-subtitle">Core competencies as a .NET &amp; SQL Developer in Chennai</p>
     <div class="tech-grid">
       <div class="tech-category">
         <div class="tech-category-label">Languages</div>
         <div class="tech-pills">
-          <span class="pill"><span class="pill-icon">🔷</span> C#</span>
-          <span class="pill"><span class="pill-icon">🗃️</span> SQL</span>
-          <span class="pill"><span class="pill-icon">🗃️</span> T-SQL</span>
-          <span class="pill"><span class="pill-icon">🔵</span> TypeScript</span>
-          <span class="pill"><span class="pill-icon">🟡</span> JavaScript</span>
+          <span class="pill">C#</span>
+          <span class="pill">SQL</span>
+          <span class="pill">T-SQL</span>
+          <span class="pill">TypeScript</span>
+          <span class="pill">JavaScript</span>
         </div>
       </div>
       <div class="tech-category">
         <div class="tech-category-label">Backend</div>
         <div class="tech-pills">
-          <span class="pill"><span class="pill-icon">⚙️</span> .NET Core</span>
-          <span class="pill"><span class="pill-icon">🌐</span> ASP.NET Web API</span>
-          <span class="pill"><span class="pill-icon">💾</span> Entity Framework Core</span>
+          <span class="pill">.NET Core</span>
+          <span class="pill">ASP.NET Web API</span>
+          <span class="pill">Entity Framework Core</span>
         </div>
       </div>
       <div class="tech-category">
         <div class="tech-category-label">Frontend</div>
         <div class="tech-pills">
-          <span class="pill"><span class="pill-icon">🅰️</span> Angular</span>
-          <span class="pill"><span class="pill-icon">🏠</span> HTML</span>
-          <span class="pill"><span class="pill-icon">🎨</span> CSS</span>
+          <span class="pill">Angular</span>
+          <span class="pill">HTML</span>
+          <span class="pill">CSS</span>
         </div>
       </div>
       <div class="tech-category">
         <div class="tech-category-label">Databases</div>
         <div class="tech-pills">
-          <span class="pill"><span class="pill-icon">🛲</span> SQL Server</span>
-          <span class="pill"><span class="pill-icon">☁️</span> Azure SQL</span>
-          <span class="pill"><span class="pill-icon">🐬</span> MySQL</span>
+          <span class="pill">SQL Server</span>
+          <span class="pill">Azure SQL</span>
+          <span class="pill">MySQL</span>
         </div>
       </div>
       <div class="tech-category">
         <div class="tech-category-label">Tools</div>
         <div class="tech-pills">
-          <span class="pill"><span class="pill-icon">🔀</span> Git</span>
-          <span class="pill"><span class="pill-icon">🐙</span> GitHub</span>
-          <span class="pill"><span class="pill-icon">🚀</span> Azure DevOps</span>
-          <span class="pill"><span class="pill-icon">💻</span> Visual Studio</span>
-          <span class="pill"><span class="pill-icon">🖥️</span> VS Code</span>
+          <span class="pill">Git</span>
+          <span class="pill">GitHub</span>
+          <span class="pill">Azure DevOps</span>
+          <span class="pill">Visual Studio</span>
+          <span class="pill">VS Code</span>
         </div>
       </div>
       <div class="tech-category">
         <div class="tech-category-label">Practices</div>
         <div class="tech-pills">
-          <span class="pill"><span class="pill-icon">✨</span> Clean Code</span>
-          <span class="pill"><span class="pill-icon">🔗</span> REST API Design</span>
-          <span class="pill"><span class="pill-icon">🔍</span> Debugging</span>
-          <span class="pill"><span class="pill-icon">♻️</span> Refactoring</span>
+          <span class="pill">Clean Code</span>
+          <span class="pill">REST API Design</span>
+          <span class="pill">Debugging</span>
+          <span class="pill">Refactoring</span>
         </div>
       </div>
     </div>
@@ -758,11 +230,11 @@
 
   <!-- ===== Featured Projects (Case Studies) ===== -->
   <section class="card-section fade-up" id="projects">
-    <h2>📂 Featured Projects</h2>
-    <p style="text-align:center;color:var(--text-muted);margin-bottom:1.25rem;">Real-world projects demonstrating .NET &amp; SQL expertise</p>
+    <h2><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg> Featured Projects</h2>
+    <p class="section-subtitle">Real-world projects demonstrating .NET &amp; SQL expertise</p>
     <div class="projects-grid">
-      <div class="project-card">
-        <h3><a href="https://pavithran-p12.github.io/InOfficeIQ/" target="_blank" rel="noopener noreferrer">🏢 InOfficeIQ</a></h3>
+      <article class="project-card">
+        <h3><a href="https://pavithran-p12.github.io/InOfficeIQ/" target="_blank" rel="noopener noreferrer"><svg class="project-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="6" x2="15" y2="6"/><line x1="9" y1="10" x2="15" y2="10"/><line x1="9" y1="14" x2="15" y2="14"/><line x1="9" y1="18" x2="15" y2="18"/></svg> InOfficeIQ</a></h3>
         <p><strong>Problem:</strong> Office managers lacked a centralized system to track employee attendance, leading to inconsistent records, manual errors, and zero visibility into attendance patterns across teams.</p>
         <p><strong>Solution:</strong> Built a full-stack attendance management platform using <strong>ASP.NET Core Web API</strong> for the backend, <strong>Angular</strong> for the frontend, and <strong>SQL Server</strong> for data persistence. Designed RESTful endpoints for check-in/check-out, real-time dashboard aggregation, and admin reporting modules. Implemented <strong>Entity Framework Core</strong> for clean data access with proper repository patterns.</p>
         <p><strong>Result:</strong> Delivered a production-ready application with real-time dashboards, automated report generation, and role-based access control—demonstrating end-to-end full-stack .NET development capability.</p>
@@ -773,21 +245,9 @@
           <span class="project-tag">Entity Framework</span>
           <span class="project-tag">REST API</span>
         </div>
-      </div>
-      <div class="project-card">
-        <h3><a href="https://github.com/Pavithran-P12/Milestones" target="_blank" rel="noopener noreferrer">🧭 Milestones – Developer Growth Tracker</a></h3>
-        <p><strong>Problem:</strong> As a developer ramping up on multiple technologies simultaneously, it was difficult to measure progress, recall what was learned, and stay accountable to a learning plan.</p>
-        <p><strong>Solution:</strong> Created a structured documentation system on GitHub where every completed task, learning milestone, and project achievement is documented with context, date, and detailed explanations. Each entry follows a consistent format for easy reference.</p>
-        <p><strong>Result:</strong> Built a comprehensive knowledge base that serves as both a personal reference and a public portfolio of continuous learning—covering .NET, SQL, Angular, and software engineering best practices.</p>
-        <div class="project-tags">
-          <span class="project-tag">Documentation</span>
-          <span class="project-tag">Growth Tracking</span>
-          <span class="project-tag">Markdown</span>
-          <span class="project-tag">Knowledge Base</span>
-        </div>
-      </div>
-      <div class="project-card">
-        <h3><a href="https://github.com/Pavithran-P12/ReadmePacman" target="_blank" rel="noopener noreferrer">👾 ReadmePacman – GitHub Profile Automation</a></h3>
+      </article>
+      <article class="project-card">
+        <h3><a href="https://github.com/Pavithran-P12/ReadmePacman" target="_blank" rel="noopener noreferrer"><svg class="project-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> ReadmePacman – GitHub Profile Automation</a></h3>
         <p><strong>Problem:</strong> Standard GitHub contribution graphs are static and don’t stand out on developer profiles, missing an opportunity to showcase consistent coding activity in a memorable way.</p>
         <p><strong>Solution:</strong> Developed a custom <strong>GitHub Actions</strong> CI/CD workflow that automatically generates an animated Pac-Man contribution graph as an SVG, committed to a dedicated output branch on a scheduled cron job.</p>
         <p><strong>Result:</strong> Created a fully automated, zero-maintenance solution that updates daily—demonstrating proficiency in GitHub Actions, SVG generation, and DevOps automation practices.</p>
@@ -797,9 +257,9 @@
           <span class="project-tag">SVG</span>
           <span class="project-tag">Automation</span>
         </div>
-      </div>
-      <div class="project-card">
-        <h3><a href="https://pavithran.tech" rel="noopener noreferrer">🌐 Portfolio Website</a></h3>
+      </article>
+      <article class="project-card">
+        <h3><a href="https://pavithran.tech" rel="noopener noreferrer"><svg class="project-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Portfolio Website</a></h3>
         <p><strong>Problem:</strong> Needed a professional online presence to showcase skills and projects as a .NET &amp; SQL Developer in Chennai, without relying on heavy frameworks or build tools.</p>
         <p><strong>Solution:</strong> Built a modern, SEO-optimized single-file portfolio using vanilla HTML, CSS, and JavaScript. Features dark mode with persistence, scroll animations, frosted-glass cards, responsive design, and structured data for search engines.</p>
         <p><strong>Result:</strong> A fast-loading, accessible portfolio hosted on GitHub Pages with a custom domain, proper Schema.org markup, and optimized meta tags targeting “.NET Developer Chennai” searches.</p>
@@ -810,26 +270,26 @@
           <span class="project-tag">SEO</span>
           <span class="project-tag">GitHub Pages</span>
         </div>
-      </div>
+      </article>
     </div>
   </section>
 
   <!-- ===== Experience Timeline ===== -->
   <section class="card-section fade-up" id="experience">
-    <h2>💼 Experience</h2>
+    <h2><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> Experience</h2>
     <div class="timeline">
       <div class="timeline-item">
-        <div class="timeline-date">2023 – Present</div>
+        <time class="timeline-date" datetime="2023">2023 – Present</time>
         <div class="timeline-title">Software Analyst @ Agilysys</div>
         <p class="timeline-desc">Building and maintaining enterprise hospitality solutions using .NET, T-SQL, and Azure. Focused on backend API development, database optimization, and production support for high-availability systems.</p>
       </div>
       <div class="timeline-item">
-        <div class="timeline-date">2023</div>
+        <time class="timeline-date" datetime="2023">2023</time>
         <div class="timeline-title">Started Professional Career</div>
         <p class="timeline-desc">Joined Agilysys as a fresh graduate, quickly ramping up on enterprise codebases, debugging production issues, and contributing to feature development sprint-over-sprint.</p>
       </div>
       <div class="timeline-item">
-        <div class="timeline-date">2019 – 2023</div>
+        <time class="timeline-date" datetime="2019">2019 – 2023</time>
         <div class="timeline-title">Bachelor's in Computer Science</div>
         <p class="timeline-desc">Graduated with a strong foundation in programming, databases, and software engineering. Built multiple academic and side projects that sharpened real-world development skills.</p>
       </div>
@@ -838,129 +298,65 @@
 
   <!-- ===== GitHub Stats ===== -->
   <section class="card-section center fade-up" id="stats">
-    <h2>📊 GitHub Stats</h2>
+    <h2><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg> GitHub Stats</h2>
     <div class="stats-row">
-      <img src="https://github-readme-stats.zohan.tech/api?username=Pavithran-P12&show_icons=true&theme=transparent&hide_border=true&bg_color=00000000&title_color=58a6ff&text_color=8b949e&icon_color=58a6ff" alt="GitHub Stats" loading="lazy" />
-      <img src="https://github-readme-stats.zohan.tech/api/top-langs/?username=Pavithran-P12&layout=compact&theme=transparent&hide_border=true&bg_color=00000000&title_color=58a6ff&text_color=8b949e" alt="Top Languages" loading="lazy" />
+      <img src="https://github-readme-stats.zohan.tech/api?username=Pavithran-P12&show_icons=true&theme=transparent&hide_border=true&bg_color=00000000&title_color=58a6ff&text_color=8b949e&icon_color=58a6ff" alt="GitHub Stats" loading="lazy" decoding="async" />
+      <img src="https://github-readme-stats.zohan.tech/api/top-langs/?username=Pavithran-P12&layout=compact&theme=transparent&hide_border=true&bg_color=00000000&title_color=58a6ff&text_color=8b949e" alt="Top Languages" loading="lazy" decoding="async" />
     </div>
-    <div class="stats-row" style="margin-top: 1rem;">
-      <img src="https://streak-stats.demolab.com/?user=Pavithran-P12&theme=transparent&hide_border=true&background=00000000&ring=58a6ff&fire=58a6ff&currStreakLabel=58a6ff&sideLabels=8b949e&dates=8b949e" alt="GitHub Streak" loading="lazy" />
+    <div class="stats-row mt-1">
+      <img src="https://streak-stats.demolab.com/?user=Pavithran-P12&theme=transparent&hide_border=true&background=00000000&ring=58a6ff&fire=58a6ff&currStreakLabel=58a6ff&sideLabels=8b949e&dates=8b949e" alt="GitHub Streak" loading="lazy" decoding="async" />
     </div>
   </section>
 
   <!-- ===== Contributions ===== -->
   <section class="card-section center fade-up" id="contributions">
-    <h2>👾 Pac-Man GitHub Contribution Graph</h2>
+    <h2><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg> Contribution Graph</h2>
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Pavithran-P12/ReadmePacman/output/pacman-contribution-graph-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Pavithran-P12/ReadmePacman/output/pacman-contribution-graph.svg">
-      <img alt="Pac-Man contribution graph" src="https://raw.githubusercontent.com/Pavithran-P12/ReadmePacman/output/pacman-contribution-graph.svg" loading="lazy">
+      <img alt="Pac-Man contribution graph" src="https://raw.githubusercontent.com/Pavithran-P12/ReadmePacman/output/pacman-contribution-graph.svg" loading="lazy" decoding="async">
     </picture>
   </section>
 
   <!-- ===== Connect / Contact ===== -->
   <section class="card-section center fade-up" id="contact">
-    <h2>📫 Let’s Connect</h2>
+    <h2><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Let's Connect</h2>
     <p>I’m a <strong>.NET &amp; SQL Developer based in Chennai</strong>, open to full-time roles, freelance projects, and collaborations.
     Whether you need an <strong>ASP.NET Core Developer in Chennai</strong> or a <strong>SQL Server specialist</strong> for remote work, I’d love to hear from you.</p>
-    <div class="badges" style="margin-top:1rem;">
-      <a href="https://www.linkedin.com/in/pavithranm/" target="_blank" rel="noopener noreferrer">
-        <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin" alt="LinkedIn" loading="lazy" />
+    <div class="contact-buttons mt-1">
+      <a href="https://www.linkedin.com/in/pavithranm/" target="_blank" rel="noopener noreferrer" class="contact-btn linkedin">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
       </a>
-      <a href="https://www.youtube.com/@NosGames_p12" target="_blank" rel="noopener noreferrer">
-        <img src="https://img.shields.io/badge/YouTube-Subscribe-red?style=for-the-badge&logo=youtube" alt="YouTube" loading="lazy" />
+      <a href="https://www.youtube.com/@NosGames_p12" target="_blank" rel="noopener noreferrer" class="contact-btn youtube">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        YouTube
       </a>
-      <a href="mailto:pavi.12.pavi@gmail.com">
-        <img src="https://img.shields.io/badge/Gmail-Email-red?style=for-the-badge&logo=gmail" alt="Gmail" loading="lazy" />
+      <a href="mailto:pavi.12.pavi@gmail.com" class="contact-btn email">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Email
       </a>
     </div>
-    <p style="margin-top:1.25rem;color:var(--text-muted);font-size:0.9rem;">
-      <a href="https://github.com/Pavithran-P12" target="_blank" rel="noopener noreferrer">⭐ View my GitHub</a> &bull;
-      <a href="https://www.linkedin.com/in/pavithranm/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a> &bull;
-      <a href="mailto:pavi.12.pavi@gmail.com">pavi.12.pavi@gmail.com</a>
-    </p>
   </section>
 
-  <!-- ===== Growth Tracker ===== -->
-  <section class="card-section center fade-up" id="growth">
-    <h2>🧭 My Growth Tracker</h2>
-    <p>🗂 I'm tracking all my completed tasks and milestones in <a href="https://github.com/Pavithran-P12/Milestones" target="_blank" rel="noopener noreferrer">Milestones</a> → Each task is documented, dated, and explained in detail!</p>
-  </section>
   </main>
 
   <!-- ===== Footer ===== -->
   <footer class="footer" role="contentinfo">
     <div class="footer-links">
-      <a href="https://github.com/Pavithran-P12" target="_blank" rel="noopener noreferrer" aria-label="GitHub">🐙</a>
-      <a href="https://www.linkedin.com/in/pavithranm/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">💼</a>
-      <a href="https://www.youtube.com/@NosGames_p12" target="_blank" rel="noopener noreferrer" aria-label="YouTube">🎬</a>
-      <a href="mailto:pavi.12.pavi@gmail.com" aria-label="Email">✉️</a>
+      <a href="https://github.com/Pavithran-P12" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+      <a href="https://www.linkedin.com/in/pavithranm/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+      <a href="https://www.youtube.com/@NosGames_p12" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg></a>
+      <a href="mailto:pavi.12.pavi@gmail.com" aria-label="Email"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
     </div>
     <p>&copy; 2026 Pavithran M. All rights reserved.</p>
-    <p>Built with ❤️ and hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+    <p>Built with <svg class="inline-icon heart-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> and hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a></p>
   </footer>
 
   <!-- Back to top button -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></button>
 
   <!-- ===== Scripts ===== -->
-  <script>
-    // Dark mode toggle with localStorage persistence
-    const toggle = document.getElementById('themeToggle');
-    const root = document.documentElement;
-    const saved = localStorage.getItem('theme');
-    if (saved) {
-      root.setAttribute('data-theme', saved);
-      toggle.textContent = saved === 'dark' ? '☀️' : '🌙';
-    }
-    toggle.addEventListener('click', () => {
-      const isDark = root.getAttribute('data-theme') === 'dark' ||
-        (!root.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
-      const next = isDark ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      toggle.textContent = next === 'dark' ? '☀️' : '🌙';
-    });
-
-    // Mobile hamburger menu
-    document.getElementById('navHamburger').addEventListener('click', () => {
-      document.getElementById('navLinks').classList.toggle('open');
-    });
-
-    // Active nav link on scroll
-    const sections = document.querySelectorAll('.card-section');
-    const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
-    const navObserver = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          navAnchors.forEach(a => a.classList.remove('active'));
-          const active = document.querySelector('.nav-links a[href="#' + e.target.id + '"]');
-          if (active) active.classList.add('active');
-        }
-      });
-    }, { rootMargin: '-40% 0px -55% 0px' });
-    sections.forEach(s => navObserver.observe(s));
-
-    // Scroll fade-in animations
-    const fadeEls = document.querySelectorAll('.fade-up');
-    const fadeObserver = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          fadeObserver.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.15 });
-    fadeEls.forEach(el => fadeObserver.observe(el));
-
-    // Back to top button
-    const topBtn = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      topBtn.classList.toggle('show', window.scrollY > 300);
-    });
-    topBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
+  <script src="main.js" defer></script>
 </body>
 </html>
