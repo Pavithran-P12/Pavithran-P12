@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- SEO Meta Tags -->
@@ -118,7 +118,7 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="projects.html">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#certifications">Certs</a></li>
       <li><a href="#awards">Awards</a></li>
@@ -133,7 +133,7 @@
     <h1>Full Stack Developer – <span>Pavithran M</span></h1>
     <p class="subtitle">Software Analyst &ndash; Agilysys &bull; Angular &bull; .NET Core &bull; SQL Server &bull; 4+ Years Experience</p>
     <nav class="hero-cta" aria-label="Quick links">
-      <a href="#projects" class="btn btn-primary"><svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg> View Projects</a>
+      <a href="projects.html" class="btn btn-primary"><svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg> View Projects</a>
       <a href="#contact" class="btn btn-outline"><svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Get In Touch</a>
     </nav>
   </header>
@@ -248,50 +248,29 @@
     </div>
   </section>
 
-  <!-- ===== Featured Projects (Case Studies) ===== -->
+  <!-- ===== Projects ===== -->
   <section class="card-section fade-up" id="projects">
-    <h2><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg> Featured Projects</h2>
-    <p class="section-subtitle">Real-world projects demonstrating full-stack expertise</p>
-    <div class="projects-grid">
-      <article class="project-card">
-        <h3><a href="https://pavithran-p12.github.io/InOfficeIQ/" target="_blank" rel="noopener noreferrer"><svg class="project-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="6" x2="15" y2="6"/><line x1="9" y1="10" x2="15" y2="10"/><line x1="9" y1="14" x2="15" y2="14"/><line x1="9" y1="18" x2="15" y2="18"/></svg> InOfficeIQ</a></h3>
-        <p><strong>Problem:</strong> Office managers lacked a centralized system to track employee attendance, leading to inconsistent records, manual errors, and zero visibility into attendance patterns across teams.</p>
-        <p><strong>Solution:</strong> Built a full-stack attendance management platform using <strong>ASP.NET Core Web API</strong> for the backend, <strong>Angular</strong> for the frontend, and <strong>SQL Server</strong> for data persistence. Designed RESTful endpoints for check-in/check-out, real-time dashboard aggregation, and admin reporting modules. Implemented <strong>Entity Framework Core</strong> for clean data access with proper repository patterns.</p>
-        <p><strong>Result:</strong> Delivered a production-ready application with real-time dashboards, automated report generation, and role-based access control—demonstrating end-to-end full-stack .NET development capability.</p>
-        <div class="project-tags">
-          <span class="project-tag">ASP.NET Core</span>
-          <span class="project-tag">Angular</span>
-          <span class="project-tag">SQL Server</span>
-          <span class="project-tag">Entity Framework</span>
-          <span class="project-tag">REST API</span>
-        </div>
-      </article>
-      <article class="project-card">
-        <h3><a href="https://github.com/Pavithran-P12/ReadmePacman" target="_blank" rel="noopener noreferrer"><svg class="project-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> ReadmePacman – GitHub Profile Automation</a></h3>
-        <p><strong>Problem:</strong> Standard GitHub contribution graphs are static and don’t stand out on developer profiles, missing an opportunity to showcase consistent coding activity in a memorable way.</p>
-        <p><strong>Solution:</strong> Developed a custom <strong>GitHub Actions</strong> CI/CD workflow that automatically generates an animated Pac-Man contribution graph as an SVG, committed to a dedicated output branch on a scheduled cron job.</p>
-        <p><strong>Result:</strong> Created a fully automated, zero-maintenance solution that updates daily—demonstrating proficiency in GitHub Actions, SVG generation, and DevOps automation practices.</p>
-        <div class="project-tags">
-          <span class="project-tag">GitHub Actions</span>
-          <span class="project-tag">CI/CD</span>
-          <span class="project-tag">SVG</span>
-          <span class="project-tag">Automation</span>
-        </div>
-      </article>
-      <article class="project-card">
-        <h3><a href="https://pavithran.tech" rel="noopener noreferrer"><svg class="project-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Portfolio Website</a></h3>
-        <p><strong>Problem:</strong> Needed a professional online presence to showcase skills and projects as a Full Stack Developer, without relying on heavy frameworks or build tools.</p>
-        <p><strong>Solution:</strong> Built a modern, SEO-optimized portfolio using vanilla HTML, CSS, and JavaScript. Features dark mode with persistence, scroll animations, frosted-glass cards, responsive design, and structured data for search engines.</p>
-        <p><strong>Result:</strong> A fast-loading, accessible portfolio hosted on GitHub Pages with a custom domain, proper Schema.org markup, and optimized meta tags targeting "Full Stack Developer Chennai" searches.</p>
-        <div class="project-tags">
-          <span class="project-tag">HTML5</span>
-          <span class="project-tag">CSS3</span>
-          <span class="project-tag">JavaScript</span>
-          <span class="project-tag">SEO</span>
-          <span class="project-tag">GitHub Pages</span>
-        </div>
-      </article>
+    <h2><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg> Projects</h2>
+    <p class="section-subtitle">Real-world projects demonstrating full-stack expertise across Angular, .NET &amp; SQL Server.</p>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <svg class="cert-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#icon-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="6" x2="15" y2="6"/><line x1="9" y1="10" x2="15" y2="10"/><line x1="9" y1="14" x2="15" y2="14"/></svg>
+        <span>InOfficeIQ</span>
+      </div>
+      <div class="cert-card">
+        <svg class="cert-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#icon-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+        <span>Weather App</span>
+      </div>
+      <div class="cert-card">
+        <svg class="cert-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#icon-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <span>ReadmePacman</span>
+      </div>
+      <div class="cert-card">
+        <svg class="cert-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#icon-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span>Portfolio Website</span>
+      </div>
     </div>
+    <p class="center mt-1"><a href="projects.html" class="btn btn-outline"><svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg> View All Projects</a></p>
   </section>
 
   <!-- ===== Experience Timeline ===== -->
