@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f6f4ee"/>
+  <g fill="#66685f" font-family="monospace" font-size="16"><text x="80" y="85">INDEPENDENT MIND. DEVELOPER BY CRAFT.</text><text x="950" y="85">CHENNAI, INDIA</text></g>
+  <text x="70" y="281" fill="#262923" font-family="Arial,sans-serif" font-size="166" letter-spacing="-11">Pavithran M<tspan fill="#b74624">.</tspan></text>
+  <path d="M80 325h1040" stroke="#d8d8ce"/>
+  <text x="80" y="380" fill="#b74624" font-family="monospace" font-size="16">FULL STACK DEVELOPER</text>
+  <text x="80" y="448" fill="#262923" font-family="Arial,sans-serif" font-size="45" letter-spacing="-2">Thoughtful software.</text>
+  <text x="80" y="503" fill="#262923" font-family="Georgia,serif" font-size="45" font-style="italic" letter-spacing="-1">From data to interface.</text>
+  <path d="m936 449 56-29 56 29-56 30Z m-56 3 56 29 56-29 m-112 32 56 29 56-29" fill="none" stroke="#b74624" stroke-width="2"/>
+  <text x="80" y="579" fill="#66685f" font-family="monospace" font-size="14">PAVITHRANM.IN / SELECTED WORK &amp; EXPERIMENTS</text>
+</svg>

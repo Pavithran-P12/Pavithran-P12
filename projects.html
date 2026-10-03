@@ -1,173 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects – Pavithran M | Full Stack Developer</title>
-  <meta name="description" content="Explore projects by Pavithran M – InOfficeIQ, Weather App, ReadmePacman, and more. Built with Angular, .NET Core, SQL Server, and modern web technologies." />
-  <meta name="keywords" content="Pavithran M Projects, InOfficeIQ, Weather App, Angular Projects, .NET Core Projects, Full Stack Developer Projects" />
-  <meta name="author" content="Pavithran M" />
-  <link rel="canonical" href="https://pavithran.tech/projects" />
-  <meta name="theme-color" content="#0d1117" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="apple-touch-icon" href="/favicon.svg" />
-
-  <!-- Preconnect -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <!-- Google Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" />
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Social Media Preview -->
-  <meta property="og:title" content="Projects – Pavithran M | Full Stack Developer" />
-  <meta property="og:description" content="Explore projects by Pavithran M – InOfficeIQ, Weather App, ReadmePacman & more." />
-  <meta property="og:url" content="https://pavithran.tech/projects" />
-  <meta property="og:type" content="website" />
-</head>
-<body>
-  <!-- Shared SVG gradient for section icons -->
-  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" style="position:absolute">
-    <defs>
-      <linearGradient id="icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#3b82f6"/>
-        <stop offset="100%" stop-color="#8b5cf6"/>
-      </linearGradient>
-    </defs>
-  </svg>
-
-  <a href="#projects" class="skip-link">Skip to projects</a>
-
-  <!-- ===== Navbar ===== -->
-  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
-    <a href="index.html" class="logo"><span>&lt;</span>Pavithran<span>/&gt;</span></a>
-    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#skills">Skills</a></li>
-      <li><a href="projects.html" class="active">Projects</a></li>
-      <li><a href="index.html#experience">Experience</a></li>
-      <li><a href="index.html#certifications">Certs</a></li>
-      <li><a href="index.html#awards">Awards</a></li>
-      <li><a href="index.html#stats">Stats</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-      <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg><svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button></li>
-    </ul>
-  </nav>
-
-  <!-- ===== Projects Header ===== -->
-  <header class="hero" role="banner" style="padding: 4rem 1.5rem 2.5rem;">
-    <h1><span>Projects</span></h1>
-    <p class="subtitle">Real-world projects demonstrating full-stack expertise</p>
-    <nav class="hero-cta" aria-label="Quick links">
-      <a href="index.html" class="btn btn-outline"><svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back to Home</a>
-    </nav>
-  </header>
-
-  <!-- ===== Projects ===== -->
-  <main>
-  <section class="card-section fade-up" id="projects">
-    <h2><svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg> Featured Projects</h2>
-    <div class="projects-grid">
-
-      <!-- InOfficeIQ -->
-      <article class="project-card">
-        <h3><a href="https://inofficeiq.pavithran.tech" target="_blank" rel="noopener noreferrer"><svg class="project-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="6" x2="15" y2="6"/><line x1="9" y1="10" x2="15" y2="10"/><line x1="9" y1="14" x2="15" y2="14"/><line x1="9" y1="18" x2="15" y2="18"/></svg> InOfficeIQ</a></h3>
-        <p><strong>Problem:</strong> Office managers lacked a centralized system to track employee attendance, leading to inconsistent records, manual errors, and zero visibility into attendance patterns across teams.</p>
-        <p><strong>Solution:</strong> Built a full-stack attendance management platform using <strong>ASP.NET Core Web API</strong> for the backend, <strong>Angular</strong> for the frontend, and <strong>SQL Server</strong> for data persistence. Designed RESTful endpoints for check-in/check-out, real-time dashboard aggregation, and admin reporting modules. Implemented <strong>Entity Framework Core</strong> for clean data access with proper repository patterns.</p>
-        <p><strong>Result:</strong> Delivered a production-ready application with real-time dashboards, automated report generation, and role-based access control—demonstrating end-to-end full-stack .NET development capability.</p>
-        <div class="project-tags">
-          <span class="project-tag">ASP.NET Core</span>
-          <span class="project-tag">Angular</span>
-          <span class="project-tag">SQL Server</span>
-          <span class="project-tag">Entity Framework</span>
-          <span class="project-tag">REST API</span>
-        </div>
-      </article>
-
-      <!-- Weather App -->
-      <article class="project-card">
-        <h3><a href="https://weather.pavithran.tech" target="_blank" rel="noopener noreferrer"><svg class="project-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg> Weather App</a></h3>
-        <p><strong>Problem:</strong> Users needed a quick, intuitive way to check real-time weather conditions for any location without cluttered interfaces or excessive ads.</p>
-        <p><strong>Solution:</strong> Built a clean, responsive weather application that fetches real-time weather data via API integration, displaying current conditions, temperature, humidity, and forecasts with a modern UI.</p>
-        <p><strong>Result:</strong> Delivered a fast, user-friendly weather app with location search, responsive design, and real-time data updates—hosted on a custom domain for easy access.</p>
-        <div class="project-tags">
-          <span class="project-tag">HTML5</span>
-          <span class="project-tag">CSS3</span>
-          <span class="project-tag">JavaScript</span>
-          <span class="project-tag">REST API</span>
-          <span class="project-tag">Weather API</span>
-        </div>
-      </article>
-
-      <!-- ReadmePacman -->
-      <article class="project-card">
-        <h3><a href="https://github.com/Pavithran-P12/ReadmePacman" target="_blank" rel="noopener noreferrer"><svg class="project-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> ReadmePacman – GitHub Profile Automation</a></h3>
-        <p><strong>Problem:</strong> Standard GitHub contribution graphs are static and don't stand out on developer profiles, missing an opportunity to showcase consistent coding activity in a memorable way.</p>
-        <p><strong>Solution:</strong> Developed a custom <strong>GitHub Actions</strong> CI/CD workflow that automatically generates an animated Pac-Man contribution graph as an SVG, committed to a dedicated output branch on a scheduled cron job.</p>
-        <p><strong>Result:</strong> Created a fully automated, zero-maintenance solution that updates daily—demonstrating proficiency in GitHub Actions, SVG generation, and DevOps automation practices.</p>
-        <div class="project-tags">
-          <span class="project-tag">GitHub Actions</span>
-          <span class="project-tag">CI/CD</span>
-          <span class="project-tag">SVG</span>
-          <span class="project-tag">Automation</span>
-        </div>
-      </article>
-
-      <!-- Portfolio Website -->
-      <article class="project-card">
-        <h3><a href="https://pavithran.tech" rel="noopener noreferrer"><svg class="project-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Portfolio Website</a></h3>
-        <p><strong>Problem:</strong> Needed a professional online presence to showcase skills and projects as a Full Stack Developer, without relying on heavy frameworks or build tools.</p>
-        <p><strong>Solution:</strong> Built a modern, SEO-optimized portfolio using vanilla HTML, CSS, and JavaScript. Features dark mode with persistence, scroll animations, frosted-glass cards, responsive design, and structured data for search engines.</p>
-        <p><strong>Result:</strong> A fast-loading, accessible portfolio hosted on GitHub Pages with a custom domain, proper Schema.org markup, and optimized meta tags targeting "Full Stack Developer Chennai" searches.</p>
-        <div class="project-tags">
-          <span class="project-tag">HTML5</span>
-          <span class="project-tag">CSS3</span>
-          <span class="project-tag">JavaScript</span>
-          <span class="project-tag">SEO</span>
-          <span class="project-tag">GitHub Pages</span>
-        </div>
-      </article>
-
-      <!-- Sorting Hat -->
-      <article class="project-card">
-        <h3><a href="https://sortinghat.pavithran.tech" target="_blank" rel="noopener noreferrer"><svg class="project-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> Sorting Hat</a></h3>
-        <p><strong>Problem:</strong> Wanted a fun, interactive way to engage visitors with a personality-driven quiz inspired by the Harry Potter universe, while showcasing frontend development skills.</p>
-        <p><strong>Solution:</strong> Built an interactive Hogwarts Sorting Hat quiz that asks users 7 personality-based questions and assigns them to a Hogwarts house. Features a magical UI with immersive design, smooth animations, and responsive layout.</p>
-        <p><strong>Result:</strong> A polished, entertaining web app hosted on a custom subdomain that demonstrates creative frontend development, engaging UX design, and attention to thematic detail.</p>
-        <div class="project-tags">
-          <span class="project-tag">HTML5</span>
-          <span class="project-tag">CSS3</span>
-          <span class="project-tag">JavaScript</span>
-          <span class="project-tag">Interactive UI</span>
-          <span class="project-tag">GitHub Pages</span>
-        </div>
-      </article>
-
-    </div>
-  </section>
-  </main>
-
-  <!-- ===== Footer ===== -->
-  <footer class="footer" role="contentinfo">
-    <div class="footer-links">
-      <a href="https://github.com/Pavithran-P12" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
-      <a href="https://www.linkedin.com/in/pavithranm/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-      <a href="https://www.youtube.com/@NosGames_p12" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg></a>
-      <a href="mailto:pavi.12.pavi@gmail.com" aria-label="Email"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
-    </div>
-    <p>&copy; 2026 Pavithran M. All rights reserved.</p>
-    <p>Built with <svg class="inline-icon heart-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> and hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a></p>
-  </footer>
-
-  <button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></button>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Work &amp; Experiments — Pavithran M.</title>
+  <meta name="description" content="A closer look at InOfficeIQ, Weather App, ReadmePacman, Sorting Hat, and this portfolio. Useful tools and playful experiments by Pavithran M.">
+  <meta name="author" content="Pavithran M">
+  <meta name="theme-color" content="#f6f4ee">
+  <link rel="canonical" href="https://pavithranm.in/projects.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <script>try{const t=localStorage.getItem('theme');document.documentElement.dataset.theme=t==='dark'||t==='light'?t:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch{}</script>
+  <link rel="stylesheet" href="style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Work &amp; Experiments — Pavithran M.">
+  <meta property="og:description" content="Useful tools, playful experiments, and the stories behind the build.">
+  <meta property="og:url" content="https://pavithranm.in/projects.html">
+  <meta property="og:image" content="https://pavithranm.in/assets/social-preview.png">
+  <meta property="og:image:alt" content="Pavithran M. — Thoughtful software. From data to interface.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://pavithranm.in/assets/social-preview.png">
   <script src="main.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to projects</a>
+  <header class="site-header"><div class="header-inner container">
+    <a class="brand" href="index.html" aria-label="Pavithran M, home">pm<span class="brand-dot">.</span></a>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="projects.html" aria-current="page">Work</a><a href="index.html#about">About</a><a href="index.html#experience">Journey</a><a class="nav-contact" href="index.html#contact">Say hello <span aria-hidden="true">↗</span></a></nav>
+    <div class="header-actions"><button class="theme-toggle" type="button" aria-label="Switch to dark theme" hidden><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16Z" fill="currentColor" stroke="none"/></svg></button><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden><span class="menu-label">Menu</span><span class="menu-icon" aria-hidden="true"></span></button></div>
+  </div></header>
+  <main id="main" tabindex="-1">
+    <section class="archive-hero container" aria-labelledby="archive-title"><p class="eyebrow">The workbench / Projects &amp; experiments</p><h1 id="archive-title">A few things I've<br>put into <em>the world.</em></h1><div class="archive-intro"><p>Some solve an everyday problem. Some start with “what if?”<br>All of them teach me something about building better software.</p><a class="text-link" href="index.html">Back to the introduction <span aria-hidden="true">↖</span></a></div></section>
+    <section class="archive-projects container" id="projects" aria-label="Project collection">
+      <div class="archive-toolbar"><div class="project-filters" role="group" aria-label="Filter projects" hidden><button class="filter-button" type="button" data-filter="all" aria-pressed="true">All work</button><button class="filter-button" type="button" data-filter="tools" aria-pressed="false">Useful tools</button><button class="filter-button" type="button" data-filter="experiments" aria-pressed="false">Experiments</button><button class="filter-button" type="button" data-filter="web" aria-pressed="false">For the web</button></div><p class="filter-count" role="status" aria-live="polite" aria-atomic="true">05 projects / the whole collection</p></div>
+
+      <article class="case-study" id="inofficeiq" data-category="tools" aria-labelledby="office-title">
+        <div class="project-visual office-visual" aria-hidden="true"><div class="visual-topline"><span>InOfficeIQ / A little order for hybrid work</span><span>01</span></div><div class="office-window"><div class="window-bar"><span class="window-dots"><i></i><i></i><i></i></span><span>InOfficeIQ</span><span>↗</span></div><div class="office-body"><div class="office-title"><div><span class="mock-label">YOUR MONTH, AT A GLANCE</span><strong>Make room for real life.</strong></div><span class="calendar-icon">▦</span></div><div class="office-stats"><div><strong>10<span>days</span></strong><span>Office target</span></div><div><strong>06<span>days</span></strong><span>Planned so far</span></div><div class="office-remaining"><strong>04<span>days</span></strong><span>Left to plan</span></div></div><div class="calendar-heading"><strong>October 2026</strong><span>‹ &nbsp; ›</span></div><div class="calendar-grid"><b>M</b><b>T</b><b>W</b><b>T</b><b>F</b><b>S</b><b>S</b><span></span><span></span><span></span><span>1</span><span>2</span><span class="weekend">3</span><span class="weekend">4</span><span class="office-day">5</span><span class="office-day">6</span><span class="office-day">7</span><span>8</span><span>9</span><span class="weekend">10</span><span class="weekend">11</span><span>12</span><span class="office-day">13</span><span class="office-day">14</span><span class="office-day">15</span><span>16</span><span class="weekend">17</span><span class="weekend">18</span><span class="holiday-day">19</span><span>20</span><span>21</span><span>22</span><span>23</span><span class="weekend">24</span><span class="weekend">25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span class="weekend">31</span><span></span></div><div class="calendar-legend"><span><i></i>Office</span><span><i></i>Holiday</span><span><i></i>Weekend</span></div></div></div><span class="visual-caption">Interface study <span>Everyday utility</span></span></div>
+        <div class="case-copy"><p class="eyebrow">01 / Useful tools</p><h2 id="office-title">InOfficeIQ<span class="accent">.</span></h2><p class="case-deck">A clearer way to plan a hybrid-working month.</p><dl class="case-notes"><dt>The question</dt><dd>How many more days do I actually need to be in the office? Weekends, holidays, and changing plans make a simple requirement surprisingly hard to keep track of.</dd><dt>The build</dt><dd>An interactive calendar with office, work-from-home, and holiday selections. The calculations update as you plan, giving you an immediate view of working days and the office days still required.</dd><dt>The thinking</dt><dd>Keep the interaction direct: choose a day, see the effect. Put the calendar and the answer in the same place, without turning a personal planning tool into an enterprise dashboard.</dd></dl><p class="project-stack">HTML / CSS / JavaScript / Date &amp; calendar logic</p><div class="project-links"><a class="text-link" href="https://pavithran-p12.github.io/InOfficeIQ/" target="_blank" rel="noopener noreferrer">Try InOfficeIQ <span aria-hidden="true">↗</span></a><a class="quiet-link" href="https://github.com/Pavithran-P12/InOfficeIQ" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+
+      <article class="case-study" id="weather" data-category="tools" aria-labelledby="weather-title">
+        <div class="project-visual weather-visual" aria-hidden="true"><div class="visual-topline"><span>Weather / A clearer outlook</span><span>02</span></div><div class="weather-interface"><div class="weather-place"><span>CHENNAI, IN</span><span>↗</span></div><div class="weather-current"><span class="weather-degree">28°</span><span class="weather-sun"></span></div><p>A little sunshine.<br>A little perspective.</p><div class="weather-forecast"><div><span>NOW</span><i></i><strong>28°</strong></div><div><span>12 PM</span><i></i><strong>30°</strong></div><div><span>2 PM</span><i></i><strong>31°</strong></div><div><span>4 PM</span><i></i><strong>29°</strong></div></div></div><span class="visual-caption">Interface study <span>Sample weather data</span></span></div>
+        <div class="case-copy"><p class="eyebrow">02 / Useful tools</p><h2 id="weather-title">Weather App</h2><p class="case-deck">Find the forecast. Get on with your day.</p><dl class="case-notes"><dt>The question</dt><dd>What if checking the weather felt as simple as it should? A quick city search, useful conditions, and a readable forecast.</dd><dt>The build</dt><dd>A responsive web application that brings real-time weather data into a focused interface. Location search connects to a weather API to display temperature, humidity, and current conditions.</dd><dt>The thinking</dt><dd>Make the information hierarchy do the work. Give the current conditions space, keep the supporting data easy to scan, and adapt the interface to smaller screens.</dd></dl><p class="project-stack">HTML / CSS / JavaScript / Weather API</p><div class="project-links"><a class="text-link" href="https://pavithran-p12.github.io/Weatherapp/" target="_blank" rel="noopener noreferrer">Open Weather App <span aria-hidden="true">↗</span></a><a class="quiet-link" href="https://github.com/Pavithran-P12/Weatherapp" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+
+      <article class="case-study" id="readmepacman" data-category="experiments" aria-labelledby="pacman-title">
+        <div class="project-visual pacman-visual" aria-hidden="true"><div class="visual-topline"><span>ReadmePacman / Code meets play</span><span>03</span></div><div class="pacman-interface"><span class="mock-label">A CONTRIBUTION GRAPH, WITH A TWIST.</span><svg viewBox="0 0 460 170" fill="none"><defs><pattern id="archive-blocks" width="22" height="22" patternUnits="userSpaceOnUse"><rect width="15" height="15" rx="2" fill="#2c3d32"/></pattern></defs><rect y="10" width="460" height="154" fill="url(#archive-blocks)"/><path d="M22 44h15v15H22zm66 44h15v15H88zm44-66h15v15h-15zm22 88h15v15h-15zm66-44h15v15h-15zm44 66h15v15h-15zm66-110h15v15h-15zm22 66h15v15h-15zm44 44h15v15h-15zm44-66h15v15h-15z" fill="#89a887"/><path d="M0 76h460v22H0z" fill="#1b2420"/><path d="M227 63a23 23 0 1 0 0 46l-13-23Z" fill="#efa457"/><path d="M263 87h165" stroke="#b5bfae" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 21"/><circle cx="212" cy="73" r="2.5" fill="#1b2420"/></svg><div class="workflow-line"><span>commit</span><i>→</i><span>action</span><i>→</i><span class="workflow-output">a little magic.svg</span></div></div><span class="visual-caption">Automation study <span>Code, on a schedule</span></span></div>
+        <div class="case-copy"><p class="eyebrow">03 / Experiments</p><h2 id="pacman-title">ReadmePacman</h2><p class="case-deck">A small automated detail with a lot of personality.</p><dl class="case-notes"><dt>The question</dt><dd>Could a standard GitHub contribution graph become something more memorable, without adding another thing to maintain?</dd><dt>The build</dt><dd>A scheduled GitHub Actions workflow generates an animated Pac-Man contribution graph as an SVG and publishes it to an output branch, ready to embed in a profile README.</dd><dt>The thinking</dt><dd>Let automation take care of repetition. The output is playful; the workflow behind it is deliberately practical.</dd></dl><p class="project-stack">GitHub Actions / CI workflows / SVG / Automation</p><div class="project-links"><a class="text-link" href="https://github.com/Pavithran-P12/ReadmePacman" target="_blank" rel="noopener noreferrer">Explore the workflow <span aria-hidden="true">↗</span></a><a class="quiet-link" href="https://raw.githubusercontent.com/Pavithran-P12/ReadmePacman/output/pacman-contribution-graph.svg" target="_blank" rel="noopener noreferrer">See the generated graph <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+
+      <article class="case-study" id="sorting-hat" data-category="experiments" aria-labelledby="sorting-title">
+        <div class="project-visual sorting-visual" aria-hidden="true"><div class="visual-topline"><span>Sorting Hat / A different kind of logic</span><span>04</span></div><div class="sorting-interface"><svg viewBox="0 0 140 140" fill="none"><path d="m38 98 17-57 5-23 15 13 5 33 25 37M38 98c-24 0-32 13-15 20 21 8 77 9 99-1 14-7 4-16-17-16M48 72l17 4 9-7 20 11M46 97l29-9 28 13M62 88l7-7 9 2"/><path d="M20 45v12m-6-6h12m91 12v10m-5-5h10m-6-48v8m-4-4h8"/></svg><p>A little instinct.<br>A little magic.</p><div class="sorting-houses"><span></span><span></span><span></span><span></span></div></div><span class="visual-caption">Visual study <span>Interactive quiz</span></span></div>
+        <div class="case-copy"><p class="eyebrow">04 / Experiments</p><h2 id="sorting-title">Sorting Hat</h2><p class="case-deck">A personality quiz for the curious at heart.</p><dl class="case-notes"><dt>The question</dt><dd>How do you make a short quiz feel like an experience, rather than a form?</dd><dt>The build</dt><dd>A Hogwarts-inspired Sorting Hat quiz with seven personality-based questions, a house-assignment result, and a themed, responsive interface.</dd><dt>The thinking</dt><dd>Use a clear progression and a distinctive atmosphere to make simple frontend logic engaging. A reminder that useful engineering can have a playful side.</dd></dl><p class="project-stack">HTML / CSS / JavaScript / Interactive UI</p><div class="project-links"><a class="text-link" href="https://pavithran-p12.github.io/Sorting-hat/" target="_blank" rel="noopener noreferrer">Find your house <span aria-hidden="true">↗</span></a><a class="quiet-link" href="https://github.com/Pavithran-P12/Sorting-hat" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+
+      <article class="case-study" id="portfolio" data-category="web" aria-labelledby="portfolio-title">
+        <div class="project-visual portfolio-visual" aria-hidden="true"><div class="visual-topline"><span>A personal corner of the web</span><span>05</span></div><div class="portfolio-interface"><strong>Pavithran M<span>.</span></strong><p>Thoughtful software.<br>From data to interface.</p><span class="mock-label">A SMALL SITE. BUILT WITH INTENTION.</span></div><span class="visual-caption">Identity study <span>You're here</span></span></div>
+        <div class="case-copy"><p class="eyebrow">05 / For the web</p><h2 id="portfolio-title">This little corner</h2><p class="case-deck">A personal website that leads with the work.</p><dl class="case-notes"><dt>The question</dt><dd>What should a developer's website say about them? For me, the answer starts with the things they build and the care they put into them.</dd><dt>The build</dt><dd>An editorial portfolio made with semantic HTML, responsive CSS, and a small amount of JavaScript. Project stories, two themes, keyboard-friendly navigation, and reduced-motion support.</dd><dt>The thinking</dt><dd>Keep it light, make it personal, and let the content carry the experience. No framework needed for a small, mostly static site.</dd></dl><p class="project-stack">HTML / CSS / JavaScript / Accessibility / GitHub Pages</p><div class="project-links"><a class="text-link" href="index.html">Explore the homepage <span aria-hidden="true">↗</span></a><a class="quiet-link" href="https://github.com/Pavithran-P12/Pavithran-P12" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+      <div class="archive-outro"><div><p>More small ideas live on GitHub.</p><a class="quiet-link" href="https://pavithran-p12.github.io/Financial-Planner/" target="_blank" rel="noopener noreferrer">Also on the workbench: Financial Planner <span aria-hidden="true">↗</span></a></div><a class="text-link" href="https://github.com/Pavithran-P12?tab=repositories" target="_blank" rel="noopener noreferrer">Browse the repositories <span aria-hidden="true">↗</span></a></div>
+    </section>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container"><div class="contact-top"><p class="eyebrow section-index">The next thing starts with a conversation</p></div><h2 id="contact-title">Let's make<br><em>something.</em><span class="contact-arrow" aria-hidden="true">↗</span></h2><div class="contact-bottom"><p>Have a problem worth solving?<br>I'd love to hear what you're thinking.</p><a class="email-link" href="mailto:pavi.12.pavi@gmail.com">pavi.12.pavi@gmail.com <span aria-hidden="true">↗</span></a></div><div class="social-links"><a href="https://www.linkedin.com/in/pavithranm/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/Pavithran-P12" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.youtube.com/@NosGames_p12" target="_blank" rel="noopener noreferrer">YouTube <span aria-hidden="true">↗</span></a></div></div></section>
+  </main>
+  <footer class="site-footer container"><p>© <span data-year>2026</span> Pavithran M.</p><p>Made with intention. Built for the web.</p><a class="back-to-top" href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
 </body>
 </html>
