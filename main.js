@@ -113,6 +113,8 @@
       const section = document.getElementById(link.dataset.section);
       if (section) observer.observe(section);
     });
+    const hero = document.querySelector('.hero');
+    if (hero) observer.observe(hero);
   }
 
   const filters = document.querySelector('.project-filters');
