@@ -12,7 +12,7 @@
   const applyTheme = (theme) => {
     root.dataset.theme = theme;
     if (themeToggle) themeToggle.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`);
-    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#1c201d' : '#f6f4ee');
+    document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => meta.setAttribute('content', theme === 'dark' ? '#1c201d' : '#f6f4ee'));
   };
   applyTheme(savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : colorPreference.matches ? 'dark' : 'light');
   if (themeToggle) {

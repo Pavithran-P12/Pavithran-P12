@@ -1,0 +1,44 @@
+name: Site checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: '30 3 * * 1' # Mondays 09:00 IST: catch links that break on their own
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cname:
+    name: Custom domain is intact
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check CNAME
+        run: |
+          test -f CNAME || { echo "::error file=CNAME::CNAME is missing — the custom domain will unbind."; exit 1; }
+          actual="$(tr -d '[:space:]' < CNAME)"
+          [ "$actual" = "pavithranm.in" ] || { echo "::error file=CNAME::CNAME is '$actual', expected 'pavithranm.in'."; exit 1; }
+
+  links:
+    name: No broken links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # 404.html uses root-absolute paths, so it is skipped here.
+          # LinkedIn and YouTube block bots (999 / 429); they are excluded or accepted.
+          args: >-
+            --no-progress
+            --accept 200,206,429,999
+            --exclude '^mailto:'
+            --exclude 'linkedin\.com'
+            --exclude-path 404.html
+            './*.html'
+            './InOfficeIQ/*.html'
+          fail: true
