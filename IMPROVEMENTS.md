@@ -94,9 +94,18 @@ These matter more to recruiters than anything technical:
 
 - [ ] **Show your day-job stack in the Work section.** Every showcased project is a vanilla-JS front end, while the headline is Angular / .NET / SQL. Build and add one end-to-end project: ASP.NET Core Web API + Angular + SQL Server (Azure free tier or similar).
 - [ ] **Real screenshots alongside the mockups.** Add one real screenshot or short GIF per case study so visitors see the actual app without clicking out.
-- [ ] **CV / résumé link** (PDF) in the header or contact section.
+- [x] **CV.** One-page CV in the site's style (`cv/index.html` → `assets/Pavithran-M-CV.pdf`), focused on .NET + Angular, with download links in the hero and contact sections. Done 20 Oct 2026.
+- [ ] **Confirm the Agilysys CV bullets** match your actual work, and replace them with specifics (module or product area, features shipped, numbers) where you can.
 - [ ] **Numbers for the Agilysys role**, like the 30% / 40% on Infosys.
 - [ ] Optional: a short **"Now"** section (what you're learning or building this month).
+
+### Professional polish (review of 20 Oct 2026)
+
+- [ ] **Use a domain email** such as `hello@pavithranm.in` (free forwarding via Cloudflare Email Routing or ImprovMX) instead of `pavi.12.pavi@gmail.com` on the site, CV and README.
+- [x] **NosGames YouTube channel moved out of primary contacts.** Removed from the site contact links, README badges and JSON-LD `sameAs`. It now appears only as an interest: one line in the About section, an "Outside Work" line in the README, and the CV interests.
+- [ ] **Hero line:** consider "Full Stack .NET Developer" instead of "Full Stack Developer", and mention .NET / Angular in the intro so the positioning matches the CV.
+- [ ] **LinkedIn:** make the headline, Agilysys dates (Dec 2025) and Super Squad Award match the CV.
+- [ ] Optional: a professional photo on the About section and LinkedIn.
 
 ## 5. Optional extras
 

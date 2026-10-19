@@ -41,4 +41,5 @@ jobs:
             --exclude-path 404.html
             './*.html'
             './InOfficeIQ/*.html'
+            './cv/*.html'
           fail: true

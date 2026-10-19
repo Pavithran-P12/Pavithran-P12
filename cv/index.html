@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pavithran M — CV</title>
+  <meta name="description" content="CV of Pavithran M, full-stack .NET and Angular developer in Chennai.">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://pavithranm.in/cv/">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <!-- Source for assets/Pavithran-M-CV.pdf. To regenerate: open in Chrome, Print → Save as PDF, A4, margins None, Background graphics on. -->
+  <style>
+    @font-face{font-family:Manrope;src:url('../assets/manrope-latin.woff2') format('woff2');font-weight:400 800;font-display:swap}
+    @font-face{font-family:'DM Mono';src:url('../assets/dm-mono-latin.woff2') format('woff2');font-weight:400;font-display:swap}
+    :root{--paper:#fff;--bg:#f6f4ee;--text:#262923;--muted:#5d5f57;--line:#dcdcd2;--accent:#b74624;--sans:Manrope,'Segoe UI',sans-serif;--mono:'DM Mono',Consolas,monospace;--serif:Georgia,'Times New Roman',serif}
+    @page{size:A4;margin:0}
+    *{box-sizing:border-box}
+    html{background:var(--bg)}
+    body{margin:0;font-family:var(--sans);color:var(--text);font-size:8.2pt;line-height:1.42;-webkit-font-smoothing:antialiased;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    a{color:inherit;text-decoration:none}
+    h1,h2,h3,p,ul{margin:0}
+    .toolbar{max-width:210mm;margin:24px auto 0;display:flex;justify-content:space-between;align-items:center;gap:16px;padding-inline:4px;font-family:var(--mono);font-size:12px}
+    .toolbar a{display:inline-flex;gap:10px;align-items:center;padding:10px 16px;background:var(--text);color:var(--bg)}
+    .toolbar a:hover{background:var(--accent)}
+    .toolbar .back{background:none;color:var(--text);padding-inline:0}
+    .toolbar .back:hover{background:none;text-decoration:underline}
+    .sheet{width:210mm;min-height:297mm;margin:16px auto 40px;background:var(--paper);padding:11mm 13mm 7.5mm;box-shadow:0 10px 40px #2629231a;display:flex;flex-direction:column}
+    .eyebrow,.label,.meta,.contact,.footer{font-family:var(--mono);letter-spacing:.04em}
+    header{display:grid;grid-template-columns:1fr auto;gap:8mm;align-items:end;padding-bottom:4mm;border-bottom:1px solid var(--text)}
+    .eyebrow{font-size:7pt;text-transform:uppercase;color:var(--muted);margin-bottom:2mm}
+    h1{font-size:30pt;font-weight:500;letter-spacing:-.06em;line-height:1}
+    .accent{color:var(--accent)}
+    .role{font-family:var(--mono);font-size:9pt;color:var(--accent);margin-top:2.5mm}
+    .contact{list-style:none;padding:0;font-size:7.1pt;line-height:1.7;text-align:right}
+    section{display:grid;grid-template-columns:27mm 1fr;gap:4mm;padding-block:2.9mm;border-bottom:1px solid var(--line)}
+    section:last-of-type{border-bottom:0}
+    .label{font-size:7pt;text-transform:uppercase;color:var(--muted);padding-top:.6mm}
+    .label b{display:block;font-weight:400;color:var(--accent)}
+    .summary{font-size:8.8pt;line-height:1.5}
+    .summary em{font-family:var(--serif);font-size:9.3pt}
+    .job+.job{margin-top:2.6mm}
+    .job-head{display:flex;justify-content:space-between;align-items:baseline;gap:4mm}
+    h3{font-size:9.8pt;font-weight:600;letter-spacing:-.02em}
+    h3 span{font-weight:400;color:var(--muted)}
+    .meta{font-size:7.3pt;color:var(--muted);white-space:nowrap}
+    .stack{font-family:var(--mono);font-size:6.9pt;color:var(--accent);margin:.4mm 0 .8mm}
+    ul.points{padding-left:3.6mm}
+    ul.points li{padding-left:.8mm;margin-top:.3mm}
+    ul.points li::marker{color:var(--accent);content:'— '}
+    .side{display:grid;grid-template-columns:1fr 1fr;gap:2mm 6mm}
+    .side h3{font-size:8.9pt}
+    .side p{color:var(--muted);font-size:7.7pt;line-height:1.4;margin-top:.3mm}
+    .side .link{font-family:var(--mono);font-size:7pt;color:var(--accent)}
+    dl.skills{display:grid;grid-template-columns:18mm 1fr;gap:.6mm 3mm;margin:0}
+    dl.skills dt{font-family:var(--mono);font-size:6.9pt;text-transform:uppercase;color:var(--muted);padding-top:.4mm}
+    dl.skills dd{margin:0}
+    .two{display:grid;grid-template-columns:1.1fr 1fr;gap:6mm}
+    .two h3{font-size:8.8pt;margin-bottom:.5mm}
+    .plain{list-style:none;padding:0}
+    .plain li{display:flex;justify-content:space-between;gap:3mm;padding-block:.25mm;border-bottom:1px dotted var(--line)}
+    .plain li:last-child{border-bottom:0}
+    .plain .meta{white-space:nowrap}
+    .footer{margin-top:auto;padding-top:3mm;display:flex;justify-content:space-between;font-size:6.8pt;color:var(--muted);border-top:1px solid var(--line)}
+    @media print{html{background:none}.toolbar{display:none}.sheet{margin:0;box-shadow:none}}
+    @media screen and (max-width:820px){.sheet{width:auto;min-height:0;margin:12px;padding:24px 18px}.toolbar{margin:16px 12px 0}header,section,.side,.two{grid-template-columns:1fr}.contact{text-align:left}h1{font-size:40px}section{gap:6px}.job-head{flex-direction:column;gap:2px}dl.skills{grid-template-columns:1fr}dl.skills dd{margin-bottom:6px}}
+  </style>
+</head>
+<body>
+  <nav class="toolbar" aria-label="CV actions"><a class="back" href="../index.html">← pavithranm.in</a><a href="../assets/Pavithran-M-CV.pdf" download>Download PDF <span aria-hidden="true">↓</span></a></nav>
+  <main class="sheet">
+    <header>
+      <div>
+        <p class="eyebrow">Curriculum vitae · 2026</p>
+        <h1>Pavithran M<span class="accent">.</span></h1>
+        <p class="role">Full Stack Developer · .NET &amp; Angular · SQL Server</p>
+      </div>
+      <ul class="contact">
+        <li>Chennai, India</li>
+        <li><a href="mailto:pavi.12.pavi@gmail.com">pavi.12.pavi@gmail.com</a></li>
+        <li><a href="https://pavithranm.in/">pavithranm.in</a></li>
+        <li><a href="https://www.linkedin.com/in/pavithranm/">linkedin.com/in/pavithranm</a></li>
+        <li><a href="https://github.com/Pavithran-P12">github.com/Pavithran-P12</a></li>
+      </ul>
+    </header>
+
+    <section aria-labelledby="profile">
+      <h2 class="label" id="profile"><b>01</b>Profile</h2>
+      <p class="summary">Full-stack developer with <strong>4+ years</strong> building enterprise applications on <strong>.NET and SQL Server</strong>, now shipping <strong>Angular + ASP.NET Core</strong> features for hospitality software at Agilysys. Strongest in the data layer (query tuning, stored procedures, ETL) and comfortable across the stack, from REST APIs to responsive, accessible UI. <em>I like understanding how things work, then making them work better.</em></p>
+    </section>
+
+    <section aria-labelledby="experience">
+      <h2 class="label" id="experience"><b>02</b>Experience</h2>
+      <div>
+        <article class="job">
+          <div class="job-head"><h3>Agilysys <span>· Software Analyst</span></h3><span class="meta">Dec 2025 – Present · Chennai</span></div>
+          <p class="stack">C# · ASP.NET Core Web API · Angular · TypeScript · SQL Server · Azure DevOps</p>
+          <ul class="points">
+            <li>Build features end to end for Agilysys hospitality software: <strong>Angular</strong> front end, <strong>ASP.NET Core Web API</strong> and <strong>SQL Server</strong>.</li>
+            <li>Develop RESTful APIs in C#: controllers, services, DTOs, validation and centralised error handling, with Entity Framework Core for data access.</li>
+            <li>Build Angular components, services, routing and reactive forms in TypeScript that consume those APIs.</li>
+            <li>Write and tune SQL Server queries, stored procedures and schema changes behind new features.</li>
+            <li>Work in an Agile team on Azure DevOps and Git: pull requests, code reviews, debugging and refactoring.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <div class="job-head"><h3>Infosys <span>· Technology Analyst</span></h3><span class="meta">Apr 2022 – Dec 2025 · Coimbatore</span></div>
+          <p class="stack">C# · .NET Framework · ASP.NET · SQL Server · Oracle · PL/SQL · SSIS</p>
+          <ul class="points">
+            <li>Engineered and optimised enterprise-scale SQL databases, improving query performance by <strong>30%</strong>.</li>
+            <li>Developed and maintained .NET (C#, ASP.NET) applications and web services integrated with SQL back ends.</li>
+            <li>Reduced manual processing by <strong>40%</strong> with stored procedures, triggers and functions that automated recurring work.</li>
+            <li>Supported large-scale data migration and transformation with SSIS ETL workflows.</li>
+            <li>Prototyped AI-assisted workflow automation that cut turnaround time by <strong>20%</strong>; delivered <strong>95%+</strong> of work on time with cross-functional teams.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="side">
+      <h2 class="label" id="side"><b>03</b>Side work</h2>
+      <div class="side">
+        <div><h3>Frame OF Love <span>· client website</span></h3><p>Designed and built the site for a Coimbatore wedding studio: packages, films, gallery, WhatsApp enquiries. Astro, GitHub Pages.</p><a class="link" href="https://frameoflove.co.in/">frameoflove.co.in</a></div>
+        <div><h3>InOfficeIQ <span>· hybrid-work planner</span></h3><p>Calendar that turns office-day targets, holidays and leave into one monthly plan. JavaScript date logic.</p><a class="link" href="https://pavithran-p12.github.io/InOfficeIQ/">pavithran-p12.github.io/InOfficeIQ</a></div>
+        <div><h3>ReadmePacman <span>· automation</span></h3><p>Scheduled GitHub Actions workflow that generates an animated contribution-graph SVG for my profile.</p><a class="link" href="https://github.com/Pavithran-P12/ReadmePacman">github.com/Pavithran-P12/ReadmePacman</a></div>
+        <div><h3>pavithranm.in <span>· portfolio</span></h3><p>Semantic HTML, CSS and vanilla JS with light/dark themes, accessibility and CI link checks.</p><a class="link" href="https://github.com/Pavithran-P12/Pavithran-P12">github.com/Pavithran-P12</a></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="skills">
+      <h2 class="label" id="skills"><b>04</b>Skills</h2>
+      <dl class="skills">
+        <dt>Backend</dt><dd>C#, ASP.NET Core Web API, .NET Framework, Entity Framework Core, REST API design, Web Services</dd>
+        <dt>Frontend</dt><dd>Angular, TypeScript, RxJS, JavaScript, HTML, CSS</dd>
+        <dt>UI</dt><dd>Responsive layouts, accessibility (keyboard, ARIA, reduced motion), light/dark theming, interface and typography design</dd>
+        <dt>Data</dt><dd>SQL Server, Oracle, PL/SQL, T-SQL, stored procedures, indexing, performance tuning, window functions, CTEs, SSIS</dd>
+        <dt>Tools</dt><dd>Git, GitHub Actions, Azure DevOps, Visual Studio, VS Code, Postman, Jira, ServiceNow, AI coding assistants</dd>
+      </dl>
+    </section>
+
+    <section aria-labelledby="education">
+      <h2 class="label" id="education"><b>05</b>Education &amp; recognition</h2>
+      <div class="two">
+        <div>
+          <h3>B.Tech, Information Technology</h3>
+          <p>KGiSL Institute of Technology, Coimbatore · 2019</p>
+          <h3 style="margin-top:1.4mm">Certifications</h3>
+          <p>Infosys Certified MySQL Associate · Generative AI Professional · OpenChain Professional · Agile Developer</p>
+        </div>
+        <div>
+          <h3>Awards</h3>
+          <ul class="plain">
+            <li><span>Super Squad Award · Agilysys</span><span class="meta">2026</span></li>
+            <li><span>GEM Award · Infosys</span><span class="meta">2023, 2024</span></li>
+            <li><span>Insta Awards · Infosys</span><span class="meta">2022, 2024, 2025</span></li>
+            <li><span>Rookie of the Quarter · Infosys</span><span class="meta">2023</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="interests">
+      <h2 class="label" id="interests"><b>06</b>Interests</h2>
+      <p>AI agents and workflow automation · building small tools for everyday problems · gaming and the NosGames YouTube channel · web design and typography</p>
+    </section>
+
+    <p class="footer"><span>Pavithran M — CV</span><span>pavithranm.in</span></p>
+  </main>
+</body>
+</html>

@@ -33,7 +33,9 @@ python3 -B -m http.server 8080 --bind 127.0.0.1
 | `404.html` | Custom not-found page (GitHub Pages serves it for any missing URL). Uses **root-absolute** paths (`/style.css`) because it can be served at any depth — don't make them relative |
 | `apple-touch-icon.png` | 180×180 iOS icon rendered from `favicon.svg` (full-bleed, no rounded corners; iOS rounds it). Regenerate if the favicon changes |
 | `.github/workflows/site-checks.yml` | CI: fails if `CNAME` is missing/wrong, and runs a link checker (lychee) on push, PRs and weekly |
-| `privacy-policy.html` | Privacy policy for the **Nocturne: Spin the Bottle** mobile app. Self-contained, own inline styles. Its URL is registered with an app store — **do not move or rename**. |
+| `cv/index.html` | The CV as a web page (`/cv/`, `noindex`) and the **source of the PDF**. Self-contained styles in the site's look; screen view has a Download button |
+| `assets/Pavithran-M-CV.pdf` | One-page A4 CV, linked as "Download CV" in the homepage hero and "CV (PDF)" in both contact sections |
+| `privacy-policy.html` | Privacy policy for **this website** (uses `style.css`, `.legal` styles). Linked as "Privacy" in every page footer. If you add analytics, a form, embeds or any third-party script, update it and its "Last updated" date first. |
 | `InOfficeIQ/index.html` | Meta-refresh redirect to https://pavithran-p12.github.io/InOfficeIQ/ (keeps an old URL alive) |
 | `google*.html` | Google Search Console verification files — **do not delete or edit** |
 | `CNAME` | Custom domain. Must contain exactly `pavithranm.in` |
@@ -46,6 +48,8 @@ python3 -B -m http.server 8080 --bind 127.0.0.1
 - **Works without JavaScript.** Everything in `main.js` is an enhancement. Elements JS controls start with `hidden` in HTML and JS reveals them (`.theme-toggle`, `.menu-toggle`, `.project-filters`). Keep that pattern for new interactive bits.
 - **Accessibility is a feature.** Keep the skip link, `aria-*` states, `:focus-visible` styles, `prefers-reduced-motion` handling, and decorative SVGs marked `aria-hidden="true"`. Every external link uses `target="_blank" rel="noopener noreferrer"`.
 - **Relative internal links** (`style.css`, `projects.html`, `assets/...`) so the site works both on the custom domain and under the GitHub Pages project path.
+- **Link to files, not folders**: use `cv/index.html`, never `cv/`. A folder link works on GitHub Pages but shows a file listing when the site is opened locally from disk.
+- The main nav on every page is: Work · About · Journey · CV · Say hello. Keep it in sync across `index.html`, `projects.html`, `privacy-policy.html` and `404.html`.
 - **Keep legacy anchors working**: `#projects`, `#skills`, `#experience`, `#about`, `#certifications`, `#awards`, `#stats`, `#contributions`, `#contact`, and the project IDs on `projects.html`: `#frameoflove`, `#inofficeiq`, `#weather`, `#readmepacman`, `#sorting-hat`, `#portfolio`.
 - **Project visuals are hand-built HTML/SVG "interface studies"**, labelled as such. They are not screenshots or live data — don't caption them as real.
 - **Client work (Frame OF Love, frameoflove.co.in)** is project 01 and the first featured block on the homepage. Its mockup (`.fol-*` classes, end of `style.css`) uses gradient placeholders, not the client's photos — don't copy the studio's images into this repo. Its footer credits "P12" with a link back here.
@@ -88,9 +92,15 @@ When changing any of these, grep both files and update both.
 
 ## Content facts (source of truth is the visible site)
 
-- Current role: Software Analyst at Agilysys (Jan 2026 – present). Previously Technology Analyst at Infosys (Apr 2022 – Dec 2025).
+- Current role: Software Analyst at Agilysys (Dec 2025 – present), working on .NET (ASP.NET Core) + Angular + SQL Server. Previously Technology Analyst at Infosys (Apr 2022 – Dec 2025).
 - Based in Chennai. B.Tech IT, KGiSL Institute of Technology, 2019.
-- Contact email shown on the site: pavi.12.pavi@gmail.com. The Nocturne privacy policy uses a separate app email — leave it.
+- Contact email shown on the site and in the privacy policy: pavi.12.pavi@gmail.com.
+
+## Updating the CV
+
+1. Edit `cv/index.html` (content and styles live there). Keep it to **one A4 page** and keep the text real (no images of text) so applicant-tracking systems can read it.
+2. Regenerate the PDF: open `cv/index.html` from a local server in Chrome → Print → Save as PDF, paper **A4**, margins **None**, **Background graphics** on. Save over `assets/Pavithran-M-CV.pdf`.
+3. Check it's still one page and that the site's experience section and the CV agree (dates, titles, awards).
 
 ## Deploying
 

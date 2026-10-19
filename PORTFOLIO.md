@@ -19,7 +19,7 @@ Open `http://127.0.0.1:8080/`. Both `index.html` and `projects.html` work withou
 - Manrope and DM Mono are self-hosted WOFF2 files. Font license texts are included in `assets/`.
 - The SVG social-preview source is editable; the PNG is its generated 1200 × 630 social-media version.
 - Useful historical anchors (`#projects`, `#skills`, `#experience`, `#about`, `#certifications`, `#awards`, `#stats`, and `#contributions`) remain available.
-- The Nocturne app privacy policy, Google verification files, and InOfficeIQ redirect remain accessible at their existing paths.
+- The website privacy policy (`privacy-policy.html`), Google verification files, and InOfficeIQ redirect remain accessible at their existing paths.
 
 ## Domain and link maintenance
 

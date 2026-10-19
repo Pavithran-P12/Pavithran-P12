@@ -1,10 +1,10 @@
 # 👋 Hey There! 🤖✨
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3500&pause=1000&color=10B981&background=FF661300&center=true&multiline=true&width=1200&height=70&lines=I'm+Pavithran;Software+Analyst+at+Agilysys+%7C+.NET+%26+SQL+Developer+%7C+Constantly+Improving)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3500&pause=1000&color=10B981&background=FF661300&center=true&multiline=true&width=1200&height=70&lines=I'm+Pavithran;Full+Stack+.NET+%26+Angular+Developer+%7C+Software+Analyst+at+Agilysys)](https://git.io/typing-svg)
 ## 🚀 About Me
 
-I’m a **Software Analyst** focused on becoming a **production-ready Full-Stack .NET Developer**.  
-My core strength lies in **SQL and backend development**, and I’m currently building **clean, scalable APIs using .NET Core**, paired with **Angular frontends** that consume real-world data.
+I’m a **full-stack .NET developer** with 4+ years of experience, working as a **Software Analyst at Agilysys** on hospitality software.  
+I build **ASP.NET Core Web APIs** and **Angular** front ends on **SQL Server**, and my core strength is the data layer: query tuning, stored procedures and ETL.
 
 I enjoy working close to the data layer, designing efficient queries, and applying **good engineering practices** to write maintainable, readable, and performant code.
 
@@ -41,18 +41,22 @@ Practices:     Clean Code | REST API Design | Debugging | Refactoring
 </picture>
 
 
-📬 Connect With Me
 ## 📫 Connect With Me
 
+[![Portfolio](https://img.shields.io/badge/Portfolio-pavithranm.in-b74624?style=for-the-badge)](https://pavithranm.in/)
+[![CV](https://img.shields.io/badge/CV-PDF-262923?style=for-the-badge)](https://pavithranm.in/assets/Pavithran-M-CV.pdf)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/pavithranm/)
-[![YouTube](https://img.shields.io/badge/YouTube-Subscribe-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/@NosGames_p12)
 [![Gmail](https://img.shields.io/badge/Gmail-Email-red?style=for-the-badge&logo=gmail)](mailto:pavi.12.pavi@gmail.com)
+
+## 🎮 Outside Work
+
+When I'm not building, I'm usually gaming. I share some of it on [NosGames](https://www.youtube.com/@NosGames_p12).
 
 ## 🧭 My Growth Tracker
 
-🗂 I'm tracking all my completed tasks and milestones in [Milestones](https://github.com/Pavithran-P12/Milestones)
-[Financial Planner](https://pavithran-p12.github.io/Financial-Planner/)
-→ Each task is documented, dated, and explained in detail!
+🗂 I'm tracking my completed tasks and milestones in [Milestones](https://github.com/Pavithran-P12/Milestones). Each task is documented, dated, and explained in detail.
+
+Also on the workbench: [Financial Planner](https://pavithran-p12.github.io/Financial-Planner/).
 
 ## Personal website
 
