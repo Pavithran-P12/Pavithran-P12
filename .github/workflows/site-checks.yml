@@ -33,11 +33,15 @@ jobs:
         with:
           # 404.html uses root-absolute paths, so it is skipped here.
           # LinkedIn and YouTube block bots (999 / 429); they are excluded or accepted.
+          # Links to our own domain (canonical/og URLs) are skipped: the live site lags
+          # behind a push while Pages deploys, so a brand-new page would 404 here.
+          # Internal pages are still checked through their relative links in the repo.
           args: >-
             --no-progress
             --accept 200,206,429,999
             --exclude '^mailto:'
             --exclude 'linkedin\.com'
+            --exclude '^https?://(www\.)?pavithranm\.in'
             --exclude-path 404.html
             './*.html'
             './InOfficeIQ/*.html'
