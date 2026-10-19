@@ -46,8 +46,9 @@ python3 -B -m http.server 8080 --bind 127.0.0.1
 - **Works without JavaScript.** Everything in `main.js` is an enhancement. Elements JS controls start with `hidden` in HTML and JS reveals them (`.theme-toggle`, `.menu-toggle`, `.project-filters`). Keep that pattern for new interactive bits.
 - **Accessibility is a feature.** Keep the skip link, `aria-*` states, `:focus-visible` styles, `prefers-reduced-motion` handling, and decorative SVGs marked `aria-hidden="true"`. Every external link uses `target="_blank" rel="noopener noreferrer"`.
 - **Relative internal links** (`style.css`, `projects.html`, `assets/...`) so the site works both on the custom domain and under the GitHub Pages project path.
-- **Keep legacy anchors working**: `#projects`, `#skills`, `#experience`, `#about`, `#certifications`, `#awards`, `#stats`, `#contributions`, `#contact`, and the project IDs on `projects.html`: `#inofficeiq`, `#weather`, `#readmepacman`, `#sorting-hat`, `#portfolio`.
+- **Keep legacy anchors working**: `#projects`, `#skills`, `#experience`, `#about`, `#certifications`, `#awards`, `#stats`, `#contributions`, `#contact`, and the project IDs on `projects.html`: `#frameoflove`, `#inofficeiq`, `#weather`, `#readmepacman`, `#sorting-hat`, `#portfolio`.
 - **Project visuals are hand-built HTML/SVG "interface studies"**, labelled as such. They are not screenshots or live data — don't caption them as real.
+- **Client work (Frame OF Love, frameoflove.co.in)** is project 01 and the first featured block on the homepage. Its mockup (`.fol-*` classes, end of `style.css`) uses gradient placeholders, not the client's photos — don't copy the studio's images into this repo. Its footer credits "P12" with a link back here.
 
 ## Theming
 
@@ -67,14 +68,14 @@ There's no templating, so these are copy-pasted between `index.html` and `projec
 - `<head>` meta block, theme script, font preload, icons, `theme-color` metas
 - Header / nav / theme + menu buttons (also in `404.html`)
 - Contact section and footer (footer also in `404.html`)
-- The InOfficeIQ, Weather and ReadmePacman visual mockups (homepage cards and archive case studies)
+- The Frame OF Love, InOfficeIQ, Weather and ReadmePacman visual mockups (homepage cards and archive case studies)
 
 When changing any of these, grep both files and update both.
 
 ## Adding a project
 
-1. In `projects.html`, add an `<article class="case-study" id="<slug>" data-category="tools|experiments|web">` following an existing one (visual + `case-copy` with `dl.case-notes`).
-2. Update the static count text in `.filter-count` (`05 projects / the whole collection`) — JS recalculates it, but the no-JS fallback is hard-coded.
+1. In `projects.html`, add an `<article class="case-study" id="<slug>" data-category="client|tools|experiments|web">` following an existing one (visual + `case-copy` with `dl.case-notes`).
+2. Renumber the `01 / …` eyebrows and the number in each `.visual-topline`, and update the static count text in `.filter-count` (`06 projects / the whole collection`) — JS recalculates it, but the no-JS fallback is hard-coded.
 3. Optionally feature it on `index.html` in `#projects`.
 4. Update the meta description of `projects.html` if it lists project names.
 5. **Verify every demo/repo URL in a browser before committing.** GitHub Pages repo paths are case-sensitive (`Weatherapp`, `Sorting-hat`, `InOfficeIQ`). Never guess a URL from a display name. Record verified URLs in `PORTFOLIO.md`.

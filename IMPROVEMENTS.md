@@ -24,7 +24,7 @@ A review of the portfolio as of October 2026. The site is in good shape: fast, a
 
 ### "But wouldn't an Angular portfolio show off my Angular skills?"
 
-Not really. Recruiters look at what the site *says* and how it *feels* (fast, clean, works on their phone). They don't inspect the stack. You show Angular/.NET skill much better with **a real Angular + .NET Core project in the Work section** (see section 3). The portfolio itself saying "No framework needed for a small, mostly static site" is already a good engineering judgment signal.
+Not really. Recruiters look at what the site *says* and how it *feels* (fast, clean, works on their phone). They don't inspect the stack. You show Angular/.NET skill much better with **a real Angular + .NET Core project in the Work section** (see sections 3–4). The portfolio itself saying "No framework needed for a small, mostly static site" is already a good engineering judgment signal.
 
 ### When a build tool *would* be worth it
 
@@ -62,7 +62,33 @@ Not done, on purpose:
 
 ---
 
-## 3. Still to do: content (needs you)
+## 3. Are the projects really portfolio-worthy? (vs. the Frame OF Love client site)
+
+Frame OF Love was added on 20 Oct 2026 as project 01 ("Client work") and is now the first featured project on the homepage. Measured against it, here is an honest read of each project:
+
+| Project | Strength as portfolio evidence | Why |
+| --- | --- | --- |
+| **Frame OF Love** | **Strongest** | A real client, a real business need, live on the client's own domain, built with a modern tool (Astro), credited in its footer. It shows you can deliver for someone else, which a personal demo can't. |
+| **InOfficeIQ** | Good | Solves a real problem of your own and has actual logic (calendar and date calculations). Original idea. |
+| **ReadmePacman** | Fine as a fun extra | Shows GitHub Actions and automation. If it mainly configures an existing Pac-Man contribution action rather than code you wrote, say so ("set up", not "built"); reviewers will check. |
+| **Weather App** | Weak on the homepage | Calling a weather API is one of the most common tutorial projects. Fine in the archive. |
+| **Sorting Hat** | Weak | Also a common tutorial-style quiz. Fine in the archive as a playful piece. |
+| **This portfolio** | Good | Well-built, accessible, documented. Strong supporting evidence. |
+
+**The big gap:** none of the showcased projects has a backend, API or database, yet the headline is full stack (Angular / .NET / SQL). Frame OF Love is a static site too. Recruiters for .NET roles will look for that layer first.
+
+**To make Frame OF Love even stronger:**
+- [ ] Ask the client for a one- or two-line **testimonial** and add it to the case study.
+- [ ] Add a **real screenshot** of the live site next to the mockup (with the client's permission for any photos shown).
+- [ ] Add an **outcome** if you have one (e.g. enquiries via WhatsApp per month, page speed score, "replaced an Instagram-only presence").
+- [ ] If the code can be public, link the **source**.
+- [ ] If you want more client work: say **"Open to freelance websites"** in the contact section.
+
+**Homepage line-up to aim for:** Frame OF Love (featured) → your .NET + Angular + SQL project (featured, once it exists) → InOfficeIQ + ReadmePacman as the pair. Move Weather App to the archive only.
+
+---
+
+## 4. Still to do: content (needs you)
 
 These matter more to recruiters than anything technical:
 
@@ -72,7 +98,7 @@ These matter more to recruiters than anything technical:
 - [ ] **Numbers for the Agilysys role**, like the 30% / 40% on Infosys.
 - [ ] Optional: a short **"Now"** section (what you're learning or building this month).
 
-## 4. Optional extras
+## 5. Optional extras
 
 - **Analytics:** if you want visitor counts, use GoatCounter, Plausible or Cloudflare Web Analytics (no cookie banner needed). Avoid Google Analytics.
 - **Contact form:** `mailto:` is fine. If you want a form, Formspree / Web3Forms work with plain HTML.
