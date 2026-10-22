@@ -35,8 +35,9 @@ python3 -B -m http.server 8080 --bind 127.0.0.1
 | `.github/workflows/site-checks.yml` | CI: fails if `CNAME` is missing/wrong, and runs a link checker (lychee) on push, PRs and weekly |
 | `cv/index.html` | The CV as a web page (`/cv/`, `noindex`) and the **source of the PDF**. Self-contained styles in the site's look; screen view has a Download button |
 | `assets/Pavithran-M-CV.pdf` | One-page A4 CV, linked as "Download CV" in the homepage hero and "CV (PDF)" in both contact sections |
+| `support.html` | "Support my dream" page: the dream, what support pays for, and the Razorpay link (`https://razorpay.me/@pavithranm`). Linked from the main nav ("Donate" with a hand-holding-heart icon) and every page footer |
 | `privacy-policy.html` | Privacy policy for **this website** (uses `style.css`, `.legal` styles). Linked as "Privacy" in every page footer. If you add analytics, a form, embeds or any third-party script, update it and its "Last updated" date first. |
-| `InOfficeIQ/index.html` | Meta-refresh redirect to https://pavithran-p12.github.io/InOfficeIQ/ (keeps an old URL alive) |
+| `InOfficeIQ/index.html` | Old URL kept alive: redirects to `projects.html` (the InOfficeIQ project is no longer listed) |
 | `google*.html` | Google Search Console verification files — **do not delete or edit** |
 | `CNAME` | Custom domain. Must contain exactly `pavithranm.in` |
 | `robots.txt`, `sitemap.xml` | SEO. Update `sitemap.xml` when adding a public page |
@@ -48,10 +49,12 @@ python3 -B -m http.server 8080 --bind 127.0.0.1
 - **Works without JavaScript.** Everything in `main.js` is an enhancement. Elements JS controls start with `hidden` in HTML and JS reveals them (`.theme-toggle`, `.menu-toggle`, `.project-filters`). Keep that pattern for new interactive bits.
 - **Accessibility is a feature.** Keep the skip link, `aria-*` states, `:focus-visible` styles, `prefers-reduced-motion` handling, and decorative SVGs marked `aria-hidden="true"`. Every external link uses `target="_blank" rel="noopener noreferrer"`.
 - **Relative internal links** (`style.css`, `projects.html`, `assets/...`) so the site works both on the custom domain and under the GitHub Pages project path.
+- **No GitHub profile or source-code links** on the site or CV (no `github.com/...` repo links, no "View source", no GitHub in `sameAs`). Source repos are public, including client work, so the site points to live apps only. **Also no `pavithran-p12.github.io` links**: they reveal the GitHub username. Only projects on their own domains (client sites, pavithranm.in) are shown. The privacy policy's links to GitHub's own documentation stay, because they explain the hosting.
 - **Link to files, not folders**: use `cv/index.html`, never `cv/`. A folder link works on GitHub Pages but shows a file listing when the site is opened locally from disk.
-- The main nav on every page is: Work · About · Journey · CV · Say hello. Keep it in sync across `index.html`, `projects.html`, `privacy-policy.html` and `404.html`.
-- **Keep legacy anchors working**: `#projects`, `#skills`, `#experience`, `#about`, `#certifications`, `#awards`, `#stats`, `#contributions`, `#contact`, and the project IDs on `projects.html`: `#frameoflove`, `#inofficeiq`, `#weather`, `#readmepacman`, `#sorting-hat`, `#portfolio`.
+- The main nav on every page is: Work · About · Journey · CV · Donate (hand-holding-heart icon, to `support.html`) · Say hello. Keep it in sync across `index.html`, `projects.html`, `privacy-policy.html`, `support.html` and `404.html`.
+- **Keep legacy anchors working**: `#projects`, `#skills`, `#experience`, `#about`, `#certifications`, `#awards`, `#stats`, `#contributions`, `#contact`, and the project IDs on `projects.html`: `#frameoflove`, `#thirdspace`, `#portfolio`.
 - **Project visuals are hand-built HTML/SVG "interface studies"**, labelled as such. They are not screenshots or live data — don't caption them as real.
+- **Client work:** ThirdSpace Play (tournament.pavithranm.in, a badminton tournament platform, project 02, `.tsp-*` mockup with made-up team labels, never real player names) sits alongside Frame OF Love.
 - **Client work (Frame OF Love, frameoflove.co.in)** is project 01 and the first featured block on the homepage. Its mockup (`.fol-*` classes, end of `style.css`) uses gradient placeholders, not the client's photos — don't copy the studio's images into this repo. Its footer credits "P12" with a link back here.
 
 ## Theming
@@ -79,7 +82,7 @@ When changing any of these, grep both files and update both.
 ## Adding a project
 
 1. In `projects.html`, add an `<article class="case-study" id="<slug>" data-category="client|tools|experiments|web">` following an existing one (visual + `case-copy` with `dl.case-notes`).
-2. Renumber the `01 / …` eyebrows and the number in each `.visual-topline`, and update the static count text in `.filter-count` (`06 projects / the whole collection`) — JS recalculates it, but the no-JS fallback is hard-coded.
+2. Renumber the `01 / …` eyebrows and the number in each `.visual-topline`, and update the static count text in `.filter-count` (`07 projects / the whole collection`) — JS recalculates it, but the no-JS fallback is hard-coded.
 3. Optionally feature it on `index.html` in `#projects`.
 4. Update the meta description of `projects.html` if it lists project names.
 5. **Verify every demo/repo URL in a browser before committing.** GitHub Pages repo paths are case-sensitive (`Weatherapp`, `Sorting-hat`, `InOfficeIQ`). Never guess a URL from a display name. Record verified URLs in `PORTFOLIO.md`.
@@ -94,7 +97,8 @@ When changing any of these, grep both files and update both.
 
 - Current role: Software Analyst at Agilysys (Dec 2025 – present), working on .NET (ASP.NET Core) + Angular + SQL Server. Previously Technology Analyst at Infosys (Apr 2022 – Dec 2025).
 - Based in Chennai. B.Tech IT, KGiSL Institute of Technology, 2019.
-- Contact email shown on the site and in the privacy policy: pavi.12.pavi@gmail.com.
+- Contact email shown on the site and in the privacy policy: pavi.12.pavi@gmail.com. WhatsApp: +91 97896 12615, linked as `https://wa.me/919789612615` (contact sections, support page, CV).
+- Footer on every page: © · Privacy · Support my dream. If you add or change a payment, contact or tracking method, update `privacy-policy.html` and its date too.
 
 ## Updating the CV
 

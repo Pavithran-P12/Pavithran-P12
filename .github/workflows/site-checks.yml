@@ -41,6 +41,8 @@ jobs:
             --accept 200,206,429,999
             --exclude '^mailto:'
             --exclude 'linkedin\.com'
+            --exclude 'wa\.me'
+            --exclude 'razorpay\.(me|com)'
             --exclude '^https?://(www\.)?pavithranm\.in'
             --exclude-path 404.html
             './*.html'

@@ -56,11 +56,9 @@ When I'm not building, I'm usually gaming. I share some of it on [NosGames](http
 
 🗂 I'm tracking my completed tasks and milestones in [Milestones](https://github.com/Pavithran-P12/Milestones). Each task is documented, dated, and explained in detail.
 
-Also on the workbench: [Financial Planner](https://pavithran-p12.github.io/Financial-Planner/).
-
 ## Personal website
 
-My portfolio is at [pavithranm.in](https://pavithranm.in/), with a [GitHub Pages entry point](https://pavithran-p12.github.io/Pavithran-P12/).
+My portfolio is at [pavithranm.in](https://pavithranm.in/).
 
 The website uses HTML, CSS, and JavaScript and can be served directly; there is no build step. See [PORTFOLIO.md](PORTFOLIO.md) for development, design, and link-maintenance notes.
 

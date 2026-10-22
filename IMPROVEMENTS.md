@@ -69,6 +69,7 @@ Frame OF Love was added on 20 Oct 2026 as project 01 ("Client work") and is now 
 | Project | Strength as portfolio evidence | Why |
 | --- | --- | --- |
 | **Frame OF Love** | **Strongest** | A real client, a real business need, live on the client's own domain, built with a modern tool (Astro), credited in its footer. It shows you can deliver for someone else, which a personal demo can't. |
+| **ThirdSpace Play** | **Strong** (added 23 Oct 2026) | A real client event with real logic: a scheduling algorithm, live scoring rules, group tables and knockouts, with automated tests. The closest thing to "engineering" in the portfolio. |
 | **InOfficeIQ** | Good | Solves a real problem of your own and has actual logic (calendar and date calculations). Original idea. |
 | **ReadmePacman** | Fine as a fun extra | Shows GitHub Actions and automation. If it mainly configures an existing Pac-Man contribution action rather than code you wrote, say so ("set up", not "built"); reviewers will check. |
 | **Weather App** | Weak on the homepage | Calling a weather API is one of the most common tutorial projects. Fine in the archive. |
@@ -81,10 +82,10 @@ Frame OF Love was added on 20 Oct 2026 as project 01 ("Client work") and is now 
 - [ ] Ask the client for a one- or two-line **testimonial** and add it to the case study.
 - [ ] Add a **real screenshot** of the live site next to the mockup (with the client's permission for any photos shown).
 - [ ] Add an **outcome** if you have one (e.g. enquiries via WhatsApp per month, page speed score, "replaced an Instagram-only presence").
-- [ ] If the code can be public, link the **source**.
+- [ ] Consider making the client repo **private** (the site no longer links to any source code).
 - [ ] If you want more client work: say **"Open to freelance websites"** in the contact section.
 
-**Homepage line-up to aim for:** Frame OF Love (featured) → your .NET + Angular + SQL project (featured, once it exists) → InOfficeIQ + ReadmePacman as the pair. Move Weather App to the archive only.
+**Done (23 Oct 2026):** the homepage and projects page now show only work on its own domain: Frame OF Love and ThirdSpace Play (plus this portfolio on the projects page). InOfficeIQ, Weather App, ReadmePacman, Sorting Hat and Financial Planner were removed because their `pavithran-p12.github.io` addresses lead to the public source. Add your .NET + Angular project here once it has its own domain.
 
 ---
 
