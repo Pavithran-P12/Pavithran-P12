@@ -36,6 +36,7 @@ python3 -B -m http.server 8080 --bind 127.0.0.1
 | `cv/index.html` | The CV as a web page (`/cv/`, `noindex`) and the **source of the PDF**. Self-contained styles in the site's look; screen view has a Download button |
 | `assets/Pavithran-M-CV.pdf` | One-page A4 CV, linked as "Download CV" in the homepage hero and "CV (PDF)" in both contact sections |
 | `support.html` | "Support my dream" page: the dream, what support pays for, and the Razorpay link (`https://razorpay.me/@pavithranm`). Linked from the main nav ("Donate" with a hand-holding-heart icon) and every page footer |
+| `visit-counter.js` | Visit counter (loaded on every page and the CV). One visit per device per day (Asia/Kolkata) via Supabase RPC `record_visit` / `get_visit_count`. Device = random UUID in localStorage `pm_visitor`; `pm_visit_day` stops repeat calls. Skips localhost/file:// and bots; hides itself on any error. Footer shows it via `[data-visit-count]`. Uses the Supabase **publishable** key only |
 | `privacy-policy.html` | Privacy policy for **this website** (uses `style.css`, `.legal` styles). Linked as "Privacy" in every page footer. If you add analytics, a form, embeds or any third-party script, update it and its "Last updated" date first. |
 | `InOfficeIQ/index.html` | Old URL kept alive: redirects to `projects.html` (the InOfficeIQ project is no longer listed) |
 | `google*.html` | Google Search Console verification files — **do not delete or edit** |
@@ -100,6 +101,13 @@ When changing any of these, grep both files and update both.
 - Based in Chennai. B.Tech IT, KGiSL Institute of Technology, 2019.
 - Contact email shown on the site and in the privacy policy: pavi.12.pavi@gmail.com. WhatsApp: +91 97896 12615, linked as `https://wa.me/919789612615` (contact sections, support page, CV).
 - Footer on every page: © · Privacy · Support my dream. If you add or change a payment, contact or tracking method, update `privacy-policy.html` and its date too.
+
+## Visit counter (Supabase)
+
+- Project: "Pavithran" (`wxlpbefrbxxbosjfeudk`, region ap-northeast-1). Table `public.site_visits` (unique `device_id` + `visit_date`), RLS on with **no policies**, so the public key can't read or write it directly. Only `record_visit(uuid, text)` and `get_visit_count()` (SECURITY DEFINER, `search_path = ''`) are executable by `anon`. The advisor warnings about these are expected.
+- Never put the `service_role`/secret key in the site.
+- Handy queries (Supabase SQL editor): visits per day `select visit_date, count(*) from site_visits group by 1 order by 1 desc;` and unique devices `select count(distinct device_id) from site_visits;`.
+- If the counter changes what's stored, update the "Visit counter" section of `privacy-policy.html` and its date.
 
 ## Updating the CV
 

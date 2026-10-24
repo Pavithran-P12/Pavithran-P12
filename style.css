@@ -3197,3 +3197,8 @@ img {
     transform: none;
   }
 }
+
+/* Visit counter in the footer */
+.visit-count {
+  white-space: nowrap;
+}

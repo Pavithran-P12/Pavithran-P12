@@ -16,6 +16,7 @@
   <script>try{const t=localStorage.getItem('theme');document.documentElement.dataset.theme=t==='dark'||t==='light'?t:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch{}</script>
   <link rel="stylesheet" href="style.css">
   <script src="main.js" defer></script>
+  <script src="visit-counter.js" defer></script>
 </head>
 <body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -29,7 +30,7 @@
     <section class="archive-hero container" aria-labelledby="privacy-title">
       <p class="eyebrow">Privacy policy / pavithranm.in</p>
       <h1 id="privacy-title">Your privacy.<br><em>Kept simple.</em></h1>
-      <div class="archive-intro"><p>No cookies. No analytics. No tracking.<br>Here is everything this website does with your information.</p><p class="legal-updated">Last updated: <time datetime="2026-10-23">23 October 2026</time></p></div>
+      <div class="archive-intro"><p>No cookies. No ads. Just a simple visit counter.<br>Here is everything this website does with your information.</p><p class="legal-updated">Last updated: <time datetime="2026-10-24">24 October 2026</time></p></div>
     </section>
 
     <article class="legal container section-space">
@@ -42,7 +43,8 @@
         <h2 id="p-short"><span>02</span>The short version</h2>
         <div><ul>
           <li>There are no accounts, forms, comments or newsletters. Payments, if you choose to support me, happen on Razorpay, not on this website.</li>
-          <li>I don’t use cookies, analytics, advertising, tracking pixels or social-media widgets.</li>
+          <li>I don’t use cookies, advertising, tracking pixels, third-party analytics or social-media widgets.</li>
+          <li>A simple visit counter of my own counts one visit per device per day, using a random ID that says nothing about who you are.</li>
           <li>Fonts and images are served from this website, not from third-party services.</li>
           <li>The only personal information I receive is what you choose to send me by email or WhatsApp, and the details Razorpay shares with me if you support my work.</li>
         </ul></div>
@@ -53,6 +55,8 @@
         <div>
           <h3>Hosting logs</h3>
           <p>The site is hosted on GitHub Pages. When you visit, GitHub logs your IP address and stores it for security purposes, as described in <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#data-collection" target="_blank" rel="noopener noreferrer">GitHub’s documentation</a> and the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub General Privacy Statement</a>. I don’t have access to these logs.</p>
+          <h3>Visit counter</h3>
+          <p>To count visits, your browser saves a random ID (for example <code>3f6c…</code>) in local storage under the key <code>pm_visitor</code>, plus the date it was last counted under <code>pm_visit_day</code>. Once a day, the site sends that ID, the date and the page you landed on to my database, hosted by <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">Supabase</a>. That’s how the footer can show a visit count without counting every reload. The ID isn’t linked to your name, email, IP address or anything else about you, and it’s never used for advertising or shared. Clearing this site’s data in your browser deletes it, and you’ll simply be counted as a new visitor next time. Like any web service, Supabase processes the technical details of each request (such as your IP address) to deliver it, under its own privacy policy. I don’t store them.</p>
           <h3>Your theme choice</h3>
           <p>If you switch between light and dark mode, the choice is saved in your browser’s local storage under the key <code>theme</code>, so the site remembers it next time. It stays on your device and is never sent to me or anyone else. Clearing this site’s data in your browser removes it.</p>
           <h3>Emails and WhatsApp messages</h3>
@@ -91,6 +95,6 @@
     </article>
   </main>
 
-  <footer class="site-footer container"><p>© <span data-year>2026</span> Pavithran M. · <a href="privacy-policy.html" aria-current="page">Privacy</a> · <a href="support.html">Support my dream</a></p><p>Made with intention. Built for the web.</p><a class="back-to-top" href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
+  <footer class="site-footer container"><p>© <span data-year>2026</span> Pavithran M. · <a href="privacy-policy.html" aria-current="page">Privacy</a> · <a href="support.html">Support my dream</a></p><p>Made with intention. Built for the web.<span class="visit-count" data-visit-count hidden> · <span data-visit-number>0</span> <span data-visit-label>visits</span></span></p><a class="back-to-top" href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
 </body>
 </html>
