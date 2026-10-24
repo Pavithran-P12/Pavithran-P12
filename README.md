@@ -52,6 +52,14 @@ Case studies: [pavithranm.in/projects.html](https://pavithranm.in/projects.html)
 
 **Certifications:** Infosys Certified MySQL Associate · Generative AI Professional · OpenChain Professional · Agile Developer
 
+## Contribution graph
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Pavithran-P12/ReadmePacman/output/pacman-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Pavithran-P12/ReadmePacman/output/pacman-contribution-graph.svg">
+  <img alt="Pac-Man eating my GitHub contribution graph" src="https://raw.githubusercontent.com/Pavithran-P12/ReadmePacman/output/pacman-contribution-graph.svg">
+</picture>
+
 ## Let’s work together
 
 Have a website or a tool worth building? Message me on [WhatsApp](https://wa.me/919789612615) or [email](mailto:pavi.12.pavi@gmail.com).
