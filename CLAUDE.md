@@ -54,6 +54,7 @@ python3 -B -m http.server 8080 --bind 127.0.0.1
 - The main nav on every page is: Work · About · Journey · CV · Donate (hand-holding-heart icon, to `support.html`) · Say hello. Keep it in sync across `index.html`, `projects.html`, `privacy-policy.html`, `support.html` and `404.html`.
 - **Keep legacy anchors working**: `#projects`, `#skills`, `#experience`, `#about`, `#certifications`, `#awards`, `#stats`, `#contributions`, `#contact`, and the project IDs on `projects.html`: `#frameoflove`, `#thirdspace`, `#portfolio`.
 - **Project visuals are hand-built HTML/SVG "interface studies"**, labelled as such. They are not screenshots or live data — don't caption them as real.
+- **Every mockup is a link to the live site** (new tab, `target="_blank" rel="noopener noreferrer"`, an `aria-label` saying where it goes), on both the homepage and the projects page. The "Behind the build" links go to the case studies.
 - **Client work:** ThirdSpace Play (tournament.pavithranm.in, a badminton tournament platform, project 02, `.tsp-*` mockup with made-up team labels, never real player names) sits alongside Frame OF Love.
 - **Client work (Frame OF Love, frameoflove.co.in)** is project 01 and the first featured block on the homepage. Its mockup (`.fol-*` classes, end of `style.css`) uses gradient placeholders, not the client's photos — don't copy the studio's images into this repo. Its footer credits "P12" with a link back here.
 
