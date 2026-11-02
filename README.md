@@ -24,12 +24,14 @@ My strongest ground is the data layer (query tuning, stored procedures, ETL), an
 | Software Analyst | **Agilysys** | Dec 2025 – Present | Angular, ASP.NET Core Web API, SQL Server, Azure DevOps |
 | Technology Analyst | **Infosys** | Apr 2022 – Dec 2025 | 30% faster queries · 40% less manual processing · SSIS data migration |
 
-## Client work
+## Client work & products
 
 | Project | What it is | Built with |
 | --- | --- | --- |
 | **[ThirdSpace Play](https://tournament.pavithranm.in/)** | A platform that runs a full one-day badminton tournament: an automatic schedule for 103 matches on 5 courts, group tables, knockouts and live court-side scoring | JavaScript modules, scheduling algorithm, automated tests |
 | **[Frame OF Love](https://frameoflove.co.in/)** | Website for a Coimbatore wedding photography and film studio, with packages, films, a gallery and WhatsApp enquiries | Astro, WebP, WhatsApp deep links |
+| **[Smart Kids](https://smartkids.pavithranm.in/)** | Animated website for a children's skill development centre in Tiruchengode: a pencil rocket that launches into space, six programmes as planets, and WhatsApp booking | Astro, GSAP, Lenis, Cloudflare |
+| **[p12Vizha](https://p12vizha.vercel.app/)** | Event platform built at the Meta Global AI Developer Hackathon: organisations, custom registration forms, PayPal checkout, expiring holds and confirmation emails | Next.js, TypeScript, Supabase, PayPal, Vitest |
 | **[pavithranm.in](https://pavithranm.in/)** | My portfolio: editorial design, light and dark themes, accessible, with a privacy-friendly visit counter | HTML, CSS, JavaScript, Supabase |
 
 Case studies: [pavithranm.in/projects.html](https://pavithranm.in/projects.html)
@@ -39,7 +41,7 @@ Case studies: [pavithranm.in/projects.html](https://pavithranm.in/projects.html)
 | Area | Tools |
 | --- | --- |
 | Backend | C#, ASP.NET Core Web API, .NET Framework, Entity Framework Core, REST API design |
-| Frontend | Angular, TypeScript, RxJS, JavaScript, HTML, CSS, Astro |
+| Frontend | Angular, TypeScript, RxJS, React, Next.js, JavaScript, HTML, CSS, Astro, GSAP |
 | Data | SQL Server, Oracle, PL/SQL, T-SQL, MySQL, Supabase (Postgres), SSIS |
 | Tools | Git, GitHub Actions, Azure DevOps, Visual Studio, VS Code, Postman, Jira |
 

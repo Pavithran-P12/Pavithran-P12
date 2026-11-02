@@ -29,6 +29,8 @@ Projects shown on the site (verified live):
 | --- | --- |
 | Frame OF Love (client) | https://frameoflove.co.in/ |
 | ThirdSpace Play (client) | https://tournament.pavithranm.in/ |
+| Smart Kids (client) | https://smartkids.pavithranm.in/ |
+| p12Vizha (product) | https://p12vizha.vercel.app/ |
 | This portfolio | https://pavithranm.in/ |
 
 Only projects on their own domains are listed. Links to `*.github.io` project pages, GitHub repositories and the GitHub profile were removed on 23 Oct 2026 so visitors can't find the public source code from the site. The old `/InOfficeIQ/` path now redirects to `projects.html`.
